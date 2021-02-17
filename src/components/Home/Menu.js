@@ -15,7 +15,7 @@ const getCategories = items => {
 class Menu extends Component {
     constructor(props) {
         super(props);
-        console.log("<<menu props>>");
+        console.log("<<treatment props>>");
         console.log(props.items);
         this.state = {
             items: props.items.edges,
@@ -41,6 +41,8 @@ class Menu extends Component {
     render() {
         console.log("<<get categories>>");
         console.log(this.state.categories);
+        console.log("<< get treatment items>>")
+        console.log(this.state.happyItems);
         if (this.state.items.length > 0) {
             return (
                 <section>
@@ -64,7 +66,7 @@ class Menu extends Component {
 
                                             <div key={node.id} className="col-11 col-md-6 my-3 d-flex mx-auto swing-in-top-fwd">
                                                 {/* <div className="prd-img"><Img className="rounded" fixed={node.image.fixed} /></div> */}
-                                                <div className="flex-grow-1 px-3 prd-item">
+                                                <div className="flex-grow-1 px-3 prd-item justify-content-center">
                                                     <div className="d-flex">
                                                         <div><h6 className="mb-1">{node.title}</h6></div>
                                                         <div><h6 className="mb-1 ml-1"><strong>R{node.price}</strong></h6></div>
