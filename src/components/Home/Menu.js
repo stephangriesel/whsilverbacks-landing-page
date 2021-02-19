@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import Title from '../Globals/Title'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 
 const getCategories = items => {
+    console.log('items before mapped', items)
     let tempItems = items.map(items => {
         return items.node.category;
     })
@@ -23,6 +24,14 @@ class Menu extends Component {
             categories: getCategories(props.items.edges)
         }
     }
+
+    // toggleSort = () => {
+    //     const sortItems = { ...this.props.items };
+    //     sortItems.sort((a, b) => a.itemName.localeCompare(b.itemName));
+    //     this.setState({ items: sortedItems });
+    //     console.log("sorted", this.state.sortedItems)
+    // };
+
     handleItems = (category) => {
         let tempItems = [...this.state.items];
         if (category === "all") {
@@ -39,6 +48,8 @@ class Menu extends Component {
     }
 
     render() {
+        // console.log("<<sorted items>>")
+        // console.log(this.state.sortedItems)
         console.log("<<get categories>>");
         console.log(this.state.categories);
         console.log("<< get treatment items>>")
