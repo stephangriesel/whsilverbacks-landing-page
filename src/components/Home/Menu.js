@@ -16,6 +16,12 @@ const getCategories = items => {
 class Menu extends Component {
     constructor(props) {
         super(props);
+
+        console.log("checkprops", this.props)
+        const sortedCopy = [this.props.items]
+        sortedCopy.sort((a, b) => a.name.localeCompare(b.name));
+        console.log("<<sorted>>", sortedCopy)
+
         console.log("<<treatment props>>");
         console.log(props.items);
         this.state = {
@@ -24,13 +30,6 @@ class Menu extends Component {
             categories: getCategories(props.items.edges)
         }
     }
-
-    // toggleSort = () => {
-    //     const sortItems = { ...this.props.items };
-    //     sortItems.sort((a, b) => a.itemName.localeCompare(b.itemName));
-    //     this.setState({ items: sortedItems });
-    //     console.log("sorted", this.state.sortedItems)
-    // };
 
     handleItems = (category) => {
         let tempItems = [...this.state.items];
