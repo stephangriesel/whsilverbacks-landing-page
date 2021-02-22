@@ -17,10 +17,20 @@ class Menu extends Component {
     constructor(props) {
         super(props);
 
-        console.log("checkprops", this.props)
-        const sortedCopy = [this.props.items]
+        // const sortedCopy = [this.props.items]
+        // sortedCopy.sort((a, b) => a.title.localeCompare(b.title));
+        // console.log("<<sorted>>", sortedCopy)
+        // this.state = {
+        //     items: sortedCopy,
+        //     happyItems: props.items.edges,
+        //     categories: getCategories(props.items.edges)
+        // }
+
+        console.log("<<checkprops>>", this.props)
+        const sortedCopy = [this.props.items.edges[0].node.title]
+        console.log("<<sorted copy before compare>>", sortedCopy)
         sortedCopy.sort((a, b) => a.name.localeCompare(b.name));
-        console.log("<<sorted>>", sortedCopy)
+        console.log("<<sorted after compare>>", sortedCopy)
 
         console.log("<<treatment props>>");
         console.log(props.items);
