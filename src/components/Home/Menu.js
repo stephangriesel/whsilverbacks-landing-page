@@ -17,16 +17,16 @@ class Menu extends Component {
     constructor(props) {
         super(props);
 
-        // const sortedCopy = [this.props.items]
-        // sortedCopy.sort((a, b) => a.title.localeCompare(b.title));
-        // console.log("<<sorted>>", sortedCopy)
-        // this.state = {
-        //     items: sortedCopy,
-        //     happyItems: props.items.edges,
-        //     categories: getCategories(props.items.edges)
-        // }
-
         console.log("<<checkprops>>", this.props)
+        const arrayItems = [this.props.items.edges]
+        arrayItems.map((currentItem, index) => {
+            console.log("The current iteration is: " + index)
+            console.log("The current item is: " + currentItem)
+            console.log("The current item is: " + currentItem[0].node.title)
+            console.log("The current item is: " + currentItem[1].node.title)
+            return currentItem
+        })
+
         const sortedCopy = [this.props.items.edges[0].node.title]
         console.log("<<sorted copy before compare>>", sortedCopy)
         sortedCopy.sort((a, b) => a.name.localeCompare(b.name));
