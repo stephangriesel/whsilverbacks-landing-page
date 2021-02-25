@@ -24,7 +24,11 @@ class Menu extends Component {
             console.log("The current item is: " + currentItem)
             console.log("The current item is: " + currentItem[0].node.title)
             console.log("The current item is: " + currentItem[1].node.title)
-            return currentItem
+            return currentItem.map((newCurrentItem, newIndex) => {
+                console.log("The NEW current iteration is: " + newIndex)
+                console.log("The NEW current item is: " + newCurrentItem)
+                return newCurrentItem
+            })
         })
 
         const sortedCopy = [this.props.items.edges[0].node.title]
