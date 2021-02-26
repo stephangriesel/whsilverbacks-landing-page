@@ -18,17 +18,9 @@ class Menu extends Component {
         super(props);
 
         console.log("<<checkprops>>", this.props)
-        const arrayItems = [this.props.items.edges]
-        arrayItems.map((currentItem, index) => {
-            console.log("The current iteration is: " + index)
-            console.log("The current item is: " + currentItem)
-            console.log("The current item is: " + currentItem[0].node.title)
-            console.log("The current item is: " + currentItem[1].node.title)
-            return currentItem.map((newCurrentItem, newIndex) => {
-                console.log("The NEW current iteration is: " + newIndex)
-                console.log("The NEW current item is: " + newCurrentItem)
-                return newCurrentItem
-            })
+        const arrayItems = this.props.items.edges
+        arrayItems.map((currentItem) => {
+            console.log("Get treatment title: ", currentItem.node.title)
         })
 
         const sortedCopy = [this.props.items.edges[0].node.title]
