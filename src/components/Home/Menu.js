@@ -17,22 +17,19 @@ class Menu extends Component {
     constructor(props) {
         super(props);
 
-        console.log("<<checkprops>>", this.props)
+        console.log("<< Checkprops >>", this.props)
         const arrayItems = this.props.items.edges
-        arrayItems.map((currentItem) => {
-            console.log("Get treatment title: ", currentItem.node.title)
-        })
+        const arrayedItems = arrayItems.map((currentItem) => {
+            console.log("<< Get treatment title: ", currentItem.node, '>>')
+            return currentItem.node
+        }).sort(arrayedItems)
 
-        const sortedCopy = [this.props.items.edges[0].node.title]
-        console.log("<<sorted copy before compare>>", sortedCopy)
-        sortedCopy.sort((a, b) => a.name.localeCompare(b.name));
-        console.log("<<sorted after compare>>", sortedCopy)
+        console.log("<< Treatments in array >>", arrayedItems)
 
-        console.log("<<treatment props>>");
-        console.log(props.items);
         this.state = {
             items: props.items.edges,
             happyItems: props.items.edges,
+            title: arrayedItems,
             categories: getCategories(props.items.edges)
         }
     }
@@ -53,12 +50,9 @@ class Menu extends Component {
     }
 
     render() {
-        // console.log("<<sorted items>>")
-        // console.log(this.state.sortedItems)
-        console.log("<<get categories>>");
-        console.log(this.state.categories);
-        console.log("<< get treatment items>>")
-        console.log(this.state.happyItems);
+        console.log("<< Get categories >>", this.state.categories);
+        console.log("<< Get treatment items >>", this.state.happyItems);
+        console.log("<< Get treatment title >>", this.state.title);
         if (this.state.items.length > 0) {
             return (
                 <section>
