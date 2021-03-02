@@ -17,19 +17,20 @@ class Menu extends Component {
     constructor(props) {
         super(props);
 
-        console.log("<< Checkprops >>", this.props)
+        // console.log("<< Checkprops >>", this.props)
         const arrayItems = this.props.items.edges
+        // console.log("<< Array of items before mapped >>", arrayItems)
         const arrayedItems = arrayItems.map((currentItem) => {
-            console.log("<< Get treatment title: ", currentItem.node, '>>')
+            // console.log("<< Get treatment title: ", currentItem.node, '>>')
             return currentItem.node
-        }).sort(arrayedItems)
+        }).sort((a, b) => a.title.localeCompare(b.title))
 
-        console.log("<< Treatments in array >>", arrayedItems)
+        // console.log("<< Treatments in array >>", arrayedItems)
 
         this.state = {
             items: props.items.edges,
             happyItems: props.items.edges,
-            title: arrayedItems,
+            listItems: arrayedItems,
             categories: getCategories(props.items.edges)
         }
     }
@@ -50,9 +51,9 @@ class Menu extends Component {
     }
 
     render() {
-        console.log("<< Get categories >>", this.state.categories);
-        console.log("<< Get treatment items >>", this.state.happyItems);
-        console.log("<< Get treatment title >>", this.state.title);
+        // console.log("<< Get categories >>", this.state.categories);
+        console.log("<< Get old treatment items >>", this.state.happyItems);
+        console.log("<< Get new treatment list index >>", this.state.listItems);
         if (this.state.items.length > 0) {
             return (
                 <section>
@@ -64,11 +65,31 @@ class Menu extends Component {
                                 <div className="row mb-5">
                                     <div className="col-10 mx-auto text-center">
                                         {this.state.categories.map((category, index) => {
-                                            return (<button type="button" key={index} className="btn btn-yellowish text-capitalize m-1" onClick={() => { this.handleItems(category) }}>{category}</button>)
+                                            return (
+                                                <button
+                                                    type="button"
+                                                    key={index}
+                                                    className="btn btn-yellowish text-capitalize m-1"
+                                                    onClick={() => { this.handleItems(category) }}>{category}
+                                                </button>
+                                            )
                                         })}
                                     </div>
                                 </div>
                                 {/* Items */}
+                                <div className="row">
+                                    {this.state.listItems.map((listItem) => {
+                                        return (
+                                            <div key={listItem.id} className="flex-grow-1 px-3 prd-item justify-content-center">
+                                                <div className="d-flex">
+                                                    <div>
+                                                        <div className="mb-1">{listItem.title}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
                                 <div className="row">
                                     {/* happy items array in state, loop through array */}
                                     {this.state.happyItems.map(({ node }) => {
