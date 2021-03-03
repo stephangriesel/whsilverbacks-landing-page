@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import Title from '../Globals/Title'
-// import Img from 'gatsby-image'
 
 const getCategories = items => {
-    console.log('items before mapped', items)
+    // console.log('<< category items before mapped >>', items)
     let tempItems = items.map(items => {
         return items.node.category;
     })
@@ -29,21 +28,23 @@ class Menu extends Component {
 
         this.state = {
             items: props.items.edges,
-            happyItems: props.items.edges,
             listItems: arrayedItems,
+            happyItems: props.items.edges,
             categories: getCategories(props.items.edges)
         }
     }
 
     handleItems = (category) => {
-        let tempItems = [...this.state.items];
+        let tempItems = [...this.state.listItems];
+        console.log("<< Check temp items >>", [tempItems])
         if (category === "all") {
             this.setState(() => {
-                return { happyItems: tempItems }
+                return { happyItems: [tempItems] }
             })
         }
         else {
-            let items = tempItems.filter(({ node }) => node.category === category);
+            let items = tempItems.filter((listedItems) => listedItems.category === category);
+            // let items = tempItems.filter(({ node }) => node.category === category);
             this.setState(() => {
                 return { happyItems: items };
             })
@@ -80,10 +81,11 @@ class Menu extends Component {
                                 <div className="row">
                                     {this.state.listItems.map((listItem) => {
                                         return (
-                                            <div key={listItem.id} className="flex-grow-1 px-3 prd-item justify-content-center">
-                                                <div className="d-flex">
-                                                    <div>
+                                            <div className="col-11 col-md-6 my-3 d-flex mx-auto swing-in-top-fwd">
+                                                <div key={listItem.id} className="flex-grow-1 px-3 prd-item justify-content-center">
+                                                    <div className="d-flex">
                                                         <div className="mb-1">{listItem.title}</div>
+                                                        <div className="mb-1 ml-1"><strong>R{listItem.price}</strong></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -92,11 +94,11 @@ class Menu extends Component {
                                 </div>
                                 <div className="row">
                                     {/* happy items array in state, loop through array */}
-                                    {this.state.happyItems.map(({ node }) => {
+                                    {/* {this.state.happyItems.map(({ node }) => {
                                         return (
 
                                             <div key={node.id} className="col-11 col-md-6 my-3 d-flex mx-auto swing-in-top-fwd">
-                                                {/* <div className="prd-img"><Img className="rounded" fixed={node.image.fixed} /></div> */}
+                                                <div className="prd-img"><Img className="rounded" fixed={node.image.fixed} /></div>
                                                 <div className="flex-grow-1 px-3 prd-item justify-content-center">
                                                     <div className="d-flex">
                                                         <div><h6 className="mb-1">{node.title}</h6></div>
@@ -109,7 +111,7 @@ class Menu extends Component {
                                             </div>
 
                                         )
-                                    })}
+                                    })} */}
                                 </div>
                             </div>
                         </section>
