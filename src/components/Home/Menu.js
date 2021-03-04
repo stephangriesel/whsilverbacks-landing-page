@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Title from '../Globals/Title'
 
-const getCategories = items => {
+const getCategories = listedItems => {
     // console.log('<< category items before mapped >>', items)
-    let tempItems = items.map(items => {
+    let tempItems = listedItems.map(items => {
         return items.node.category;
     })
     let tempCategories = new Set(tempItems); // get unique value: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
@@ -30,26 +30,28 @@ class Menu extends Component {
             items: props.items.edges,
             listItems: arrayedItems,
             happyItems: props.items.edges,
-            categories: getCategories(props.items.edges)
+            categories: getCategories(arrayItems)
         }
     }
+
 
     handleItems = (category) => {
         let tempItems = [...this.state.listItems];
         console.log("<< Check temp items >>", [tempItems])
         if (category === "all") {
             this.setState(() => {
-                return { happyItems: [tempItems] }
+                return { listItems: [tempItems] }
             })
         }
         else {
-            let items = tempItems.filter((listedItems) => listedItems.category === category);
+            let items = tempItems.filter((listItems) => listItems.category === category);
             // let items = tempItems.filter(({ node }) => node.category === category);
             this.setState(() => {
-                return { happyItems: items };
+                return { listItems: items };
             })
         }
     }
+
 
     render() {
         // console.log("<< Get categories >>", this.state.categories);
