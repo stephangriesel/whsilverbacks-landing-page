@@ -34,20 +34,18 @@ class Menu extends Component {
         }
     }
 
-
     handleItems = (category) => {
+        console.log("<< Filtered list >>", this.state.listItems)
         let tempItems = [...this.state.listItems];
-        console.log("<< Check temp items >>", [tempItems])
+        console.log("<< Check temp items >>", tempItems)
         if (category === "all") {
             this.setState(() => {
-                return { listItems: [tempItems] }
+                return { listItems: tempItems }
             })
-        }
-        else {
+        } else {
             let items = tempItems.filter((listItems) => listItems.category === category);
-            // let items = tempItems.filter(({ node }) => node.category === category);
             this.setState(() => {
-                return { listItems: items };
+                // return { listItems: items }; << add magic to return full array again after this
             })
         }
     }
