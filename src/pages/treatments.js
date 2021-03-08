@@ -9,6 +9,7 @@ import SEO from "../components/seo"
 // import Info from '../components/Home/Info'
 
 import Menu from '../components/Home/Menu'
+import Treatments from '../components/Home/Treatments'
 
 
 const TreatmentsPage = ({ data }) => (
@@ -20,6 +21,7 @@ const TreatmentsPage = ({ data }) => (
       styleClass="about-background"
     /> */}
     <Menu items={data.menu} />
+    <Treatments />
   </Layout >
 );
 
