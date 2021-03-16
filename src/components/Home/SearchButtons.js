@@ -3,7 +3,7 @@ import React from 'react'
 const SearchButtons = () => {
     return (
         <div>
-            <h1>search</h1>
+            <h2>search</h2>
         </div>
     )
 }

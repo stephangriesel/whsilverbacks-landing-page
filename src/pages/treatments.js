@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from 'styled-components'
+import SearchButtons from '../components/Home/SearchButtons'
 
 const TreatmentsPage = ({ data }) => {
   console.log("page query data test", data);
@@ -10,6 +11,7 @@ const TreatmentsPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Treatments" />
+      {/* <SearchButtons /> */}
       <Wrapper>
         <div className="row-group">
           {info.map(item =>
@@ -37,17 +39,32 @@ query MyQuery {
 `
 
 const Wrapper = styled.main`
+
 .row-group {
   display:flex;
   flex-direction:column;
-  flex-wrap:wrap;
-  align-content:center;
-  height:70vh;
+  align-items:center;
 }
+
 .column-item {
-  text-align:center;
-  margin: 0 10em;
+  margin:0;
+  align-content:center;
+  justify-content:center;
+
+
+@media only screen and (min-width: 600px) {
 }
+
+@media only screen and (min-width: 768px) {
+  .row-group {
+    background:red;
+  }
+}
+
+
+}
+
+
 `
 
 export default TreatmentsPage
