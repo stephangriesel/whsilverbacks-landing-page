@@ -31,15 +31,18 @@ const TreatmentsPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Treatments" />
-      <div className="treatment-labels">
-        <a href="#" active={filter === 'All'} onClick={() => setFilter('All')}>All</a>
-        <a href="#" active={filter === 'Body'} onClick={() => setFilter('Body')}>Body</a>
-        <a href="#" active={filter === 'Eyes'} onClick={() => setFilter('Eyes')}>Eyes</a>
-        <a href="#" active={filter === 'Face'} onClick={() => setFilter('Face')}>Face</a>
-        <a href="#" active={filter === 'Feet'} onClick={() => setFilter('Feet')}>Feet</a>
-        <a href="#" active={filter === 'Hairfree'} onClick={() => setFilter('Hairfree')}>Hairfree</a>
-        <a href="#" active={filter === 'Hands'} onClick={() => setFilter('Hands')}>Hands</a>
-      </div>
+
+      <Labels>
+        <div className="treatment-labels">
+          <a href="#" active={filter === 'All'} onClick={() => setFilter('All')}>All</a>
+          <a href="#" active={filter === 'Body'} onClick={() => setFilter('Body')}>Body</a>
+          <a href="#" active={filter === 'Eyes'} onClick={() => setFilter('Eyes')}>Eyes</a>
+          <a href="#" active={filter === 'Face'} onClick={() => setFilter('Face')}>Face</a>
+          <a href="#" active={filter === 'Feet'} onClick={() => setFilter('Feet')}>Feet</a>
+          <a href="#" active={filter === 'Hairfree'} onClick={() => setFilter('Hairfree')}>Hairfree</a>
+          <a href="#" active={filter === 'Hands'} onClick={() => setFilter('Hands')}>Hands</a>
+        </div>
+      </Labels>
       <Wrapper>
         <div className="row-group">
           {treatments.map(item => item.filtered === true ? (
@@ -68,6 +71,22 @@ query MyQuery {
       id
     }
   }
+}
+`
+
+const Labels = styled.main`
+.treatment-labels {
+  a {
+    color:#000;
+    margin:0.2rem;
+    padding: 0.2rem;
+    text-transform:uppercase;
+    /* border: 1px solid #000;
+    border-radius: 15%; */
+  }
+  display:flex;
+  justify-content:center;
+  margin:2rem 0;
 }
 `
 
