@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -6,19 +6,52 @@ import styled from 'styled-components'
 import SearchButtons from '../components/Home/SearchButtons'
 
 const TreatmentsPage = ({ data }) => {
-  console.log("page query data test", data);
+
   const { items: { info } } = data
+  console.log("info page query data test", info);
+
+  const [filter, setFilter] = useState('all');
+  const [treatments, setTreatments] = useState([])
+
+  useEffect(() => {
+    setTreatments(info)
+  }, []);
+
+  useEffect(() => {
+
+    setTreatments([])
+
+    const filtered = info.map(t => ({ ...t, filtered: t.category.includes(filter) }))
+
+    setTreatments(filtered)
+  }, [filter])
+
+  console.log("filter test", filter)
+
   return (
     <Layout>
       <SEO title="Treatments" />
-      {/* <SearchButtons /> */}
+      <div className="treatment__labels">
+        <a href="#" active={filter === 'All'} onClick={() => setFilter('All')}>All</a>
+        <a href="#" active={filter === 'Body'} onClick={() => setFilter('Body')}>Body</a>
+        <a href="#" active={filter === 'Eyes'} onClick={() => setFilter('Eyes')}>Eyes</a>
+        <a href="#" active={filter === 'Face'} onClick={() => setFilter('Face')}>Face</a>
+        <a href="#" active={filter === 'Feet'} onClick={() => setFilter('Feet')}>Feet</a>
+        <a href="#" active={filter === 'Hairfree'} onClick={() => setFilter('Hairfree')}>Hairfree</a>
+        <a href="#" active={filter === 'Hands'} onClick={() => setFilter('Hands')}>Hands</a>
+      </div>
       <Wrapper>
         <div className="row-group">
-          {info.map(item =>
+          {treatments.map(item => item.filtered === true ? (
+            <span key={item.id}>
+              {item.title}: <strong>R{item.price}</strong>
+            </span>
+          ) : '')}
+          {/* {info.map(item =>
             <div className="column-item">
               {item.title}: <strong>R{item.price}</strong>
             </div>
-          )}
+          )} */}
         </div>
       </Wrapper>
     </Layout >
