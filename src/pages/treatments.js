@@ -3,14 +3,14 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from 'styled-components'
-import SearchButtons from '../components/Home/SearchButtons'
+// import SearchButtons from '../components/Home/SearchButtons'
 
 const TreatmentsPage = ({ data }) => {
 
   const { items: { info } } = data
   console.log("info page query data test", info);
 
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState('All');
   const [treatments, setTreatments] = useState([])
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const TreatmentsPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Treatments" />
-      <div className="treatment__labels">
+      <div className="treatment-labels">
         <a href="#" active={filter === 'All'} onClick={() => setFilter('All')}>All</a>
         <a href="#" active={filter === 'Body'} onClick={() => setFilter('Body')}>Body</a>
         <a href="#" active={filter === 'Eyes'} onClick={() => setFilter('Eyes')}>Eyes</a>
@@ -83,20 +83,16 @@ const Wrapper = styled.main`
   margin:0;
   align-content:center;
   justify-content:center;
-
-
-@media only screen and (min-width: 600px) {
 }
+
 
 @media only screen and (min-width: 768px) {
   .row-group {
-    background:red;
+    display:flex;
+    flex-wrap:wrap;
+    height:70vh;
   }
 }
-
-
-}
-
 
 `
 
