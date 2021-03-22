@@ -7,7 +7,7 @@ import styled from 'styled-components'
 const TreatmentsPage = ({ data }) => {
 
   const { items: { info } } = data
-  console.log("info page query data test", info);
+  // console.log("info page query data test", info);
 
   const [filter, setFilter] = useState('All');
   const [treatments, setTreatments] = useState([])
@@ -25,7 +25,7 @@ const TreatmentsPage = ({ data }) => {
     setTreatments(filtered)
   }, [filter])
 
-  console.log("filter test", filter)
+  // console.log("filter test", filter)
 
   return (
     <Layout>
