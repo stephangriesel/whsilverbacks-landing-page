@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from 'styled-components'
-// import SearchButtons from '../components/Home/SearchButtons'
 
 const TreatmentsPage = ({ data }) => {
 
@@ -34,13 +33,13 @@ const TreatmentsPage = ({ data }) => {
 
       <Labels>
         <div className="treatment-labels">
-          <a href="#" active={filter === 'All'} onClick={() => setFilter('All')}>All</a>
-          <a href="#" active={filter === 'Body'} onClick={() => setFilter('Body')}>Body</a>
-          <a href="#" active={filter === 'Eyes'} onClick={() => setFilter('Eyes')}>Eyes</a>
-          <a href="#" active={filter === 'Face'} onClick={() => setFilter('Face')}>Face</a>
-          <a href="#" active={filter === 'Feet'} onClick={() => setFilter('Feet')}>Feet</a>
-          <a href="#" active={filter === 'Hairfree'} onClick={() => setFilter('Hairfree')}>Hairfree</a>
-          <a href="#" active={filter === 'Hands'} onClick={() => setFilter('Hands')}>Hands</a>
+          <Button className="nav-btn" active={filter === 'All'} onClick={() => setFilter('All')}>All</Button>
+          <Button className="nav-btn" active={filter === 'Body'} onClick={() => setFilter('Body')}>Body</Button>
+          <Button className="nav-btn" active={filter === 'Eyes'} onClick={() => setFilter('Eyes')}>Eyes</Button>
+          <Button className="nav-btn" active={filter === 'Face'} onClick={() => setFilter('Face')}>Face</Button>
+          <Button className="nav-btn" active={filter === 'Feet'} onClick={() => setFilter('Feet')}>Feet</Button>
+          <Button className="nav-btn" active={filter === 'Hairfree'} onClick={() => setFilter('Hairfree')}>Hairfree</Button>
+          <Button className="nav-btn" active={filter === 'Hands'} onClick={() => setFilter('Hands')}>Hands</Button>
         </div>
       </Labels>
       <Wrapper>
@@ -74,19 +73,31 @@ query MyQuery {
 }
 `
 
+const Button = styled.main`
+cursor: pointer;
+padding:0.5rem;
+margin:0 0.5rem;
+border-radius:10%;
+background: var(--mainYellowish);
+transition:background 0.5s ease-out;
+&:hover {
+  background:var(--mainWhite);
+}
+`
+
 const Labels = styled.main`
 .treatment-labels {
+  margin:1rem 0;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items:center;
+  gap:0.5rem;
   a {
     color:#000;
-    margin:0.2rem;
-    padding: 0.2rem;
+    gap:0.5rem;
     text-transform:uppercase;
-    /* border: 1px solid #000;
-    border-radius: 15%; */
   }
-  display:flex;
-  justify-content:center;
-  margin:2rem 0;
 }
 `
 
@@ -106,6 +117,7 @@ const Wrapper = styled.main`
 
 
 @media only screen and (min-width: 768px) {
+  
   .row-group {
     display:flex;
     flex-wrap:wrap;
