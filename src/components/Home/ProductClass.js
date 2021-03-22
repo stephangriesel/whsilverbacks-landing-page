@@ -18,8 +18,8 @@ const getProductCategories = products => {
 export default class ProductClass extends Component {
     constructor(props) {
         super(props)
-        console.log("<< TEST PRODUCTS >>")
-        console.log(props.products)
+        // console.log("<< TEST PRODUCTS >>")
+        // console.log(props.products)
         this.state = {
             products: props.products.edges,
             allProducts: props.products.edges,
@@ -44,8 +44,8 @@ export default class ProductClass extends Component {
         }
     }
     render() {
-        console.log("<< TEST PRODUCT CATEGORIES >>")
-        console.log(this.state.productCategories);
+        // console.log("<< TEST PRODUCT CATEGORIES >>")
+        // console.log(this.state.productCategories);
         if (this.state.products.length > 0) {
             return (
                 <section className="py-5">

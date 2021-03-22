@@ -35,9 +35,9 @@ class Menu extends Component {
     }
 
     handleItems = (category) => {
-        console.log("<< Filtered list >>", this.state.listItems)
+        // console.log("<< Filtered list >>", this.state.listItems)
         let tempItems = [...this.state.listItems];
-        console.log("<< Check temp items >>", tempItems)
+        // console.log("<< Check temp items >>", tempItems)
         if (category === "all") {
             this.setState(() => {
                 return { listItems: tempItems }
@@ -53,8 +53,8 @@ class Menu extends Component {
 
     render() {
         // console.log("<< Get categories >>", this.state.categories);
-        console.log("<< Get old treatment items >>", this.state.happyItems);
-        console.log("<< Get new treatment list index >>", this.state.listItems);
+        // console.log("<< Get old treatment items >>", this.state.happyItems);
+        // console.log("<< Get new treatment list index >>", this.state.listItems);
         if (this.state.items.length > 0) {
             return (
                 <section>

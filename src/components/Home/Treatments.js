@@ -25,7 +25,7 @@ const getData = graphql`
 
 const Treatments = () => {
   const data = useStaticQuery(getData)
-  console.log("static query graphql data", data)
+  // console.log("static query graphql data", data)
   // filter: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_elements
   return (
     <>
