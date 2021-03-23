@@ -17,7 +17,7 @@ const ShopPage = ({ data }) => (
       title="Shop"
       styleClass="about-background"
     /> */}
-    <Products />
+    <Products products={data.product} />
   </Layout >
 );
 
