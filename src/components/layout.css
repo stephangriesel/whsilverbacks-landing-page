@@ -195,4 +195,10 @@ section {
     opacity: 1;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .row-group {
+    margin: 3rem 20rem;
+  }
+}
 /*# sourceMappingURL=layout.css.map */
