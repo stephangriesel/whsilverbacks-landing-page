@@ -14,7 +14,7 @@ const TreatmentsPage = ({ data }) => {
 
   useEffect(() => {
     setTreatments(info)
-  }, []);
+  }, [info]);
 
   useEffect(() => {
 
@@ -23,7 +23,7 @@ const TreatmentsPage = ({ data }) => {
     const filtered = info.map(t => ({ ...t, filtered: t.category.includes(filter) }))
 
     setTreatments(filtered)
-  }, [filter])
+  }, [info, filter])
 
   // console.log("filter test", filter)
 
