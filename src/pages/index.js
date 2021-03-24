@@ -6,8 +6,8 @@ import SEO from "../components/seo"
 
 import BackgroundSection from '../components/Globals/BackgroundSection';
 
-import Info from '../components/Home/Info'
-import LatestProducts from '../components/Home/ProductHighlights'
+// import Info from '../components/Home/Info'
+// import LatestProducts from '../components/Home/ProductHighlights'
 
 const IndexPage = ({ data }) => (
   < Layout >

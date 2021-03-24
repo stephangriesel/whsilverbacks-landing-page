@@ -100,6 +100,9 @@ section {
 /* Snipcart Overwites */
 
 .snip-layout {
+  .snip-footer {
+    background: var(--mainWhite) !important;
+  }
   .snip-footer__copyright {
     font-size: 0 !important;
     height: 20px;
@@ -108,14 +111,33 @@ section {
 
 .snip-btn--highlight {
   color: var(--mainDark) !important;
-  background: var(--mainWhite) !important;
-  &:hover {
-    color: var(--mainGrey);
-  }
+  background: var(--mainYellowish) !important;
+}
+
+.snip-ico--close {
+  color: var(--mainDark) !important;
 }
 
 .snipcart-checkout {
-  background: var(--mainWhite);
+  background: var(--mainWhite) !important;
+}
+
+.snip-header {
+  background: var(--mainWhite) !important;
+  color: var(--mainDark) !important;
+  border-radius: 10%;
+}
+
+.snip-step__item {
+  padding-left: 0.3rem !important;
+}
+
+.snip-step__label {
+  padding-left: 0.3rem !important;
+}
+
+.snip-header__total {
+  background: var(--mainYellowish) !important;
 }
 
 /* Bootstrap Override*/
