@@ -97,6 +97,27 @@ section {
   min-height: 50vh;
 }
 
+/* Snipcart Overwites */
+
+.snip-layout {
+  .snip-footer__copyright {
+    font-size: 0 !important;
+    height: 20px;
+  }
+}
+
+.snip-btn--highlight {
+  color: var(--mainDark) !important;
+  background: var(--mainWhite) !important;
+  &:hover {
+    color: var(--mainGrey);
+  }
+}
+
+.snipcart-checkout {
+  background: var(--mainWhite);
+}
+
 /* Bootstrap Override*/
 
 .prd-item {
