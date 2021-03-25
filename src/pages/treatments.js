@@ -45,15 +45,13 @@ const TreatmentsPage = ({ data }) => {
       <Wrapper>
         <div className="row-group">
           {treatments.map(item => item.filtered === true ? (
-            <span key={item.id}>
-              {item.title}: <strong>R{item.price}</strong>
-            </span>
+            <ListedItemWrapper>
+              <span class="listed-item" key={item.id}>
+                {item.title}:
+              </span>
+              <span class="listed-price" key={item.id}><strong>R{item.price}</strong></span>
+            </ListedItemWrapper>
           ) : '')}
-          {/* {info.map(item =>
-            <div className="column-item">
-              {item.title}: <strong>R{item.price}</strong>
-            </div>
-          )} */}
         </div>
       </Wrapper>
     </Layout >
@@ -123,6 +121,22 @@ const Wrapper = styled.main`
     flex-wrap:wrap;
     height:70vh;
   }
+}
+
+`
+
+const ListedItemWrapper = styled.main`
+margin:0.5rem 0.5rem;;
+display:flex;
+flex-direction:column;
+align-items:center;
+.listed-price {
+  margin-left:0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  display:flex;
+  flex-direction:row;
 }
 
 `
