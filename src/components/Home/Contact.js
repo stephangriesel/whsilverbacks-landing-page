@@ -9,7 +9,7 @@ export default function Contact() {
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
           <FormWrapper>
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="contact" method="POST" netlify>
               <label>
                 <div className="field-wrapper">
                   <div>Name:</div>{" "}
