@@ -1,6 +1,5 @@
 import React from "react"
 import Title from "../Globals/Title"
-import styled from "styled-components"
 
 export default function Contact() {
   return (
@@ -8,68 +7,56 @@ export default function Contact() {
       <Title title="Contact Us" />
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
-          <FormWrapper>
-            <form name="contact" method="POST" netlify>
-              <label>
-                <div className="field-wrapper">
-                  <div>Name:</div>{" "}
-                  <div>
-                    <input type="text" name="name" />
-                  </div>
-                </div>
-              </label>
-
-              <label>
-                <div className="field-wrapper">
-                  <div>Email:</div>
-                  <div>
-                    <input type="email" name="email" />
-                  </div>
-                </div>
-              </label>
-
-              <label>
-                <div className="field-wrapper">
-                  <div>Message:</div>
-                  <div>
-                    <textarea name="message"></textarea>
-                  </div>
-                </div>
-              </label>
-              <div className="field-wrapper">
-                <button type="submit">Send</button>
-              </div>
-            </form>
-          </FormWrapper>
+          <form action="https://formspree.io/f/xknkjdon" method="POST">
+            <div className="form-group">
+              {/* <label htmlFor="name">Name</label> */}
+              <input
+                type="text"
+                className="form-control"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+              />
+            </div>
+            <div className="form-group">
+              {/* <label htmlFor="name">Name</label> */}
+              <input
+                type="text"
+                className="form-control"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+              />
+            </div>
+            <div className="form-group">
+              {/* <label htmlFor="name">Name</label> */}
+              <input
+                type="text"
+                className="form-control"
+                name="tel"
+                id="tel"
+                placeholder="Your Telephone Number"
+              />
+            </div>
+            <div className="form-group">
+              {/* <label htmlFor="name">Name</label> */}
+              <textarea
+                name="description"
+                id="description"
+                className="form-control"
+                rows="3"
+                placeholder="Tell us more.."
+              />
+            </div>
+            <button
+              type="submit"
+              className="btn btn-yellowish btn-block text-capitalize mt-5"
+            >
+              Talk to us
+            </button>
+          </form>
         </div>
       </div>
     </section>
   )
 }
-
-const FormWrapper = styled.div`
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .field-wrapper {
-    display: flex;
-    input {
-      margin-left: 2em;
-      width: 20em;
-    }
-    textarea {
-      margin-left: 0.7em;
-      width: 20em;
-    }
-    button {
-      background: var(--mainYellowish);
-      border: none;
-      padding: 1em;
-      &:hover {
-        background: var(--mainOffWhite);
-      }
-    }
-  }
-`
