@@ -4,13 +4,13 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import BackgroundSection from '../components/Globals/BackgroundSection';
+import BackgroundSection from "../components/Globals/BackgroundSection"
 
 // import Info from '../components/Home/Info'
-// import LatestProducts from '../components/Home/ProductHighlights'
+// import LatestProducts from "../components/Home/ProductHighlights"
 
 const IndexPage = ({ data }) => (
-  < Layout >
+  <Layout>
     <SEO title="Home" />
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
@@ -19,21 +19,19 @@ const IndexPage = ({ data }) => (
     />
     {/* <Info /> */}
     {/* <LatestProducts /> */}
-  </Layout >
-);
+  </Layout>
+)
 
 export const query = graphql`
-{
-  img:file(relativePath:{
-    eq:"default-bg.jpeg"
-  }){
-    childImageSharp{
-      fluid(quality:100) {
-        ...GatsbyImageSharpFluid_tracedSVG
+  {
+    img: file(relativePath: { eq: "default-bg.jpeg" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
       }
     }
   }
-}
 `
 
 export default IndexPage
