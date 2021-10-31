@@ -2,6 +2,7 @@ import React from 'react'
 import Contact from '../components/Home/Contact'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import { graphql } from 'gatsby'
 
 // import BackgroundSection from '../components/Globals/BackgroundSection';
 
