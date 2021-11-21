@@ -10,7 +10,7 @@ export default function LatestProducts() {
         <section>
           <section className="py-5">
             <div className="container">
-              <Title title="Latest Happy Products" />
+              <Title title="Latest ChipChop Products" />
               <div className="row">
                 {data.latestProducts.edges.map(({ node: product }) => {
                   return <Product key={product.id} product={product} />

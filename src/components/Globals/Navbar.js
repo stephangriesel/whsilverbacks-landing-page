@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-// import logo from '../../images/logo_small.png'
+import logo from '../../images/chipchoplogo.webp'
 import "../css/navbar.css"
 // import { FaShoppingCart } from 'react-icons/fa'
 
@@ -53,7 +53,7 @@ export default class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-sm navbar-light">
         <Link to="/" className="navbar-brand fade-in">
-          <h1>Happy Skin</h1>
+          <img src={logo} alt="logo" />
         </Link>
         <button
           className="navbar-toggler"

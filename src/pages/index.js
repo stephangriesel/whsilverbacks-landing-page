@@ -17,16 +17,6 @@ const IndexPage = ({ data }) => (
       title="Happy Skin"
       styleClass="default-background"
     />
-    <BackgroundSection
-      img={data.img.childImageSharp.fluid}
-      title="Happy Skin"
-      styleClass="default-background"
-    />
-    <BackgroundSection
-      img={data.img.childImageSharp.fluid}
-      title="Happy Skin"
-      styleClass="default-background"
-    />
     {/* <Info /> */}
     {/* <LatestProducts /> */}
   </Layout>

@@ -15,7 +15,7 @@ export default function Product({ product }) {
                         data-item-name={product.title}
                         data-item-price={product.price}
                         data-item-image={product.image.fluid.src}
-                        data-item-url="https://happyskin.co.za/shop"
+                        data-item-url="https://chipchop.nl/shop"
                     >Add</button>
                 </div>
             </div>

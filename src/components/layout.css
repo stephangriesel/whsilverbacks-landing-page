@@ -1,35 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+/* Colour Scheme 
+Red: #d06843
+Blue: #d2e2e2
+Pink: #eccecc
+DimGray: #4e5c5c
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@500&display=swap");
 h1 {
-  font-family: "Grand Hotel", cursive;
-}
-
-h6 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 * {
+  font-family: 'Montserrat', sans-serif;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 :root {
-  --mainPink: #ffa69eff;
+  --mainPink: #eccecc;
   --mainYellowish: #faf3ddff;
   --mainGreen: #b8f2e6ff;
-  --mainBlue: #aed9e0ff;
-  --mainGrey: #5e6472ff;
+  --mainBlue: #d2e2e2;
+  --mainGrey: ##4e5c5c;
   --mainWhite: #ffffffea;
   --mainOffWhite: #faf6d8;
-  --mainDark: #161616;
+  --mainDark: #4e5c5c;
+  --mainRed: #d06843;
 }
 
 body {
   background: var(--mainWhite);
   color: var(--mainDark);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif !important;
 }
 
 section {
@@ -42,11 +44,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-position: center;
   background-size: cover;
 }
@@ -57,11 +59,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-position: center;
   /* background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255.255.255.0.5)); */
   background-size: cover;
@@ -98,6 +100,18 @@ section {
 
 .btn-yellowish:hover {
   background: var(--mainYellowish);
+  color: var(--mainDark);
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+}
+
+.btn-blue {
+  border-color: var(--mainBlue);
+  color: var(--mainGrey);
+}
+
+.btn-blue:hover {
+  background: var(--mainBlue);
   color: var(--mainDark);
   -webkit-transition: ease-in 0.5s;
   transition: ease-in 0.5s;
@@ -168,8 +182,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .prd-item-shop {
@@ -178,10 +192,10 @@ section {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-line-pack: center;
-  align-content: center;
+      align-content: center;
 }
 
 /* Animations */
@@ -209,8 +223,7 @@ section {
 }
 
 .swing-in-top-fwd {
-  -webkit-animation: swing-in-top-fwd 1.5s
-    cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  -webkit-animation: swing-in-top-fwd 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   animation: swing-in-top-fwd 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 

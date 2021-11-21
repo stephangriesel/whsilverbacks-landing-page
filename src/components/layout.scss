@@ -1,31 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+/* Colour Scheme 
+Red: #d06843
+Blue: #d2e2e2
+Pink: #eccecc
+DimGray: #4e5c5c
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@500&display=swap');
 
 h1 {
-  font-family: "Grand Hotel", cursive;
+  font-family: 'Raleway', sans-serif;
 }
 
 * {
+  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 :root {
-  --mainPink: #ffa69eff;
+  --mainPink: #eccecc;
   --mainYellowish: #faf3ddff;
   --mainGreen: #b8f2e6ff;
-  --mainBlue: #aed9e0ff;
-  --mainGrey: #5e6472ff;
+  --mainBlue: #d2e2e2;
+  --mainGrey: ##4e5c5c;
   --mainWhite: #ffffffea;
   --mainOffWhite: #faf6d8;
-  --mainDark: #161616;
+  --mainDark: #4e5c5c;
+  --mainRed: #d06843;
 }
 
 body {
   background: var(--mainWhite);
   color: var(--mainDark);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif !important;
 }
 
 section {
@@ -80,6 +87,17 @@ section {
 
 .btn-yellowish:hover {
   background: var(--mainYellowish);
+  color: var(--mainDark);
+  transition: ease-in 0.5s;
+}
+
+.btn-blue {
+  border-color: var(--mainBlue);
+  color: var(--mainGrey);
+}
+
+.btn-blue:hover {
+  background: var(--mainBlue);
   color: var(--mainDark);
   transition: ease-in 0.5s;
 }
