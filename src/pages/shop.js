@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 import Products from '../components/Home/Products'
 
 
-const ShopPage = ({ data }) => (
+const Shop = ({ data }) => (
   <Layout>
     <SEO title="Shop" />
     {/* <BackgroundSection
@@ -35,4 +35,4 @@ export const query = graphql`
 }
 `
 
-export default ShopPage
+export default Shop
