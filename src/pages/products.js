@@ -60,7 +60,7 @@ const Products = ({ data }) => {
 
 export const data = graphql`
 query MyQuery {
-  items: allContentfulHappyItem(sort: {fields: title, order: ASC}) {
+  items: allContentfulItem(sort: {fields: title, order: ASC}) {
     info:nodes {
       title
       category

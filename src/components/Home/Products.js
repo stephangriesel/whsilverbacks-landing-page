@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 const getProducts = graphql`
 {
-    products:allContentfulHappyProduct{
+    products:allContentfulProduct{
       edges{
         node{
           id

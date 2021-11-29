@@ -9,9 +9,9 @@ export default function LatestProducts() {
       return (
         <section>
           <section className="py-5">
-            <div className="container">
-              <Title title="Latest ChipChop Products" />
-              <div className="row">
+            <div className="container py-5">
+              {/* <Title title="Latest ChipChop Products" /> */}
+              <div className="row py-5">
                 {data.latestProducts.edges.map(({ node: product }) => {
                   return <Product key={product.id} product={product} />
                 })}
@@ -27,7 +27,7 @@ export default function LatestProducts() {
 
 const getLatestProducts = graphql`
 {
-  latestProducts: allContentfulLatestHappyProduct{
+  latestProducts: allContentfulLatestProduct{
       edges{
         node{
           id

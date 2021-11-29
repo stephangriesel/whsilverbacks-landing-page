@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 const getBlogPosts = graphql`
 {
-    blogPost:allContentfulHappyBlog {
+    blogPost:allContentfulBlog {
       edges {
         node {
           id
