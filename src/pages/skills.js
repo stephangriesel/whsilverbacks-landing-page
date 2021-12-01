@@ -1,17 +1,11 @@
 import React from 'react'
-import Contact from '../components/Home/Contact'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { graphql } from 'gatsby'
-import SkillsOne from '../components/Skills/SkillsOne'
-import SkillsTwo from '../components/Skills/SkillsTwo'
-import SkillsThree from '../components/Skills/SkillsThree'
-import SkillsFour from '../components/Skills/SkillsFour'
-import SkillsFive from '../components/Skills/SkillsFive'
-import SkillsSix from '../components/Skills/SkillsSix'
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
 import { useScroll } from '../components/useScroll';
+import SkillsOne from '../components/Skills/SkillsOne';
 
 // import BackgroundSection from '../components/Globals/BackgroundSection';
 
@@ -27,13 +21,10 @@ const Skills = (props) => {
     /> */}
       <motion.div initial='show' className='skills-wrapper'>
         <div className='overlay'>
-          {/* <SkillsIntro initial='hidden' ref={element} animate={controls} /> */}
           <SkillsOne initial='hidden' ref={element} animate={controls} />
-          <SkillsTwo initial='hidden' ref={element} animate={controls} />
-          <SkillsThree initial='hidden' ref={element} animate={controls} />
-          <SkillsFour initial='hidden' ref={element} animate={controls} />
-          <SkillsFive initial='hidden' ref={element} animate={controls} />
-          <SkillsSix initial='hidden' ref={element} animate={controls} />
+          <SkillsOne initial='hidden' ref={element} animate={controls} />
+          <SkillsOne initial='hidden' ref={element} animate={controls} />
+          <SkillsOne initial='hidden' ref={element} animate={controls} />
           <div className='spacer'></div>
         </div>
       </motion.div>
