@@ -12,23 +12,25 @@ import SkillsOne from '../components/Skills/SkillsOne';
 const Skills = (props) => {
   const [element, controls] = useScroll();
   return (
-    <Layout>
-      <SEO title="Skills" />
-      {/* <BackgroundSection
+    <Wrapper>
+      <Layout>
+        <SEO title="Skills" />
+        {/* <BackgroundSection
       img={data.img.childImageSharp.fluid}
       title="Skills Us"
       styleClass="Skills-background"
     /> */}
-      <motion.div initial='show' className='skills-wrapper'>
-        <div className='overlay'>
-          <SkillsOne initial='hidden' ref={element} animate={controls} />
-          <SkillsOne initial='hidden' ref={element} animate={controls} />
-          <SkillsOne initial='hidden' ref={element} animate={controls} />
-          <SkillsOne initial='hidden' ref={element} animate={controls} />
-          <div className='spacer'></div>
-        </div>
-      </motion.div>
-    </Layout>
+        <motion.div initial='show' className='skills-wrapper'>
+          <div className='overlay'>
+            <SkillsOne initial='hidden' ref={element} animate={controls} />
+            <SkillsOne initial='hidden' ref={element} animate={controls} />
+            <SkillsOne initial='hidden' ref={element} animate={controls} />
+            <SkillsOne initial='hidden' ref={element} animate={controls} />
+            <div className='spacer'></div>
+          </div>
+        </motion.div>
+      </Layout>
+    </Wrapper>
   )
 };
 
