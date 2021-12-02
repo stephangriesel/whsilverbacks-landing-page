@@ -2,15 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useScroll } from '../useScroll';
 import { fade } from '../../animation';
-import img from '../../images/furnitureinstallation.jpg'
+import img from '../../images/woodselection.jpg'
 
 const SkillsOne = () => {
     const [element, controls] = useScroll();
     return (
         <div className='two-column-alt'>
             <div className='txt-box'>
-                <h1>FURNITURE INSTALLATION</h1>
-                <p>Specialized Craft</p>
+                <h1>WOOD SELECTION</h1>
+                <p>Handcrafted Pieces</p>
             </div>
             <motion.div
                 className='img-box'

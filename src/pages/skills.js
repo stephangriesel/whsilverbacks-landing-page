@@ -6,6 +6,8 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion';
 import { useScroll } from '../components/useScroll';
 import SkillsOne from '../components/Skills/SkillsOne';
+import SkillsTwo from '../components/Skills/SkillsTwo';
+import SkillsThree from '../components/Skills/SkillsThree';
 
 // import BackgroundSection from '../components/Globals/BackgroundSection';
 
@@ -15,17 +17,11 @@ const Skills = (props) => {
     <Wrapper>
       <Layout>
         <SEO title="Skills" />
-        {/* <BackgroundSection
-      img={data.img.childImageSharp.fluid}
-      title="Skills Us"
-      styleClass="Skills-background"
-    /> */}
         <motion.div initial='show' className='skills-wrapper'>
           <div className='overlay'>
             <SkillsOne initial='hidden' ref={element} animate={controls} />
-            <SkillsOne initial='hidden' ref={element} animate={controls} />
-            <SkillsOne initial='hidden' ref={element} animate={controls} />
-            <SkillsOne initial='hidden' ref={element} animate={controls} />
+            <SkillsTwo initial='hidden' ref={element} animate={controls} />
+            <SkillsThree initial='hidden' ref={element} animate={controls} />
             <div className='spacer'></div>
           </div>
         </motion.div>
@@ -65,13 +61,14 @@ const Wrapper = styled(motion.main)`
         width: 100%;
         display: flex;
         align-self: center;
+        text-align:center;
         margin: 2em;
       }
     }
     .two-column {
       /* height: 100vh; */
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       .img-box {
         display: flex;
         flex-direction: column;
@@ -84,6 +81,7 @@ const Wrapper = styled(motion.main)`
         width: 100%;
         display: flex;
         flex-direction: column;
+        text-align:center;
         margin: 2em 0;
         h3 {
           margin: 0.5rem 2rem;
@@ -111,10 +109,12 @@ const Wrapper = styled(motion.main)`
         width: 100%;
       }
       .txt-box {
+        text-align:center;
         width: 100%;
         display: flex;
         flex-direction: column;
         margin: 2em 0;
+        align-items:center;
         h3 {
           margin: 0.5rem 2rem;
           /* font-size: 2.25rem; */
@@ -135,7 +135,7 @@ const Wrapper = styled(motion.main)`
   }
 
   @media (min-width: 800px) {
-    .about-wrapper {
+    .skills-wrapper {
       .image-block {
       }
       .overlay {
@@ -153,29 +153,35 @@ const Wrapper = styled(motion.main)`
         }
         .txt-box {
           width: 50%;
+          text-align:center;
         }
       }
       .two-column {
         display: flex;
-        flex-direction: row;
+        flex-direction:row-reverse;
         .img-box {
           width: 50%;
         }
         .txt-box {
           display: flex;
           align-self: center;
+          align-items:center;
+          text-align:center;
           width: 50%;
         }
       }
       .two-column-alt {
         display: flex;
         flex-direction: row;
+        background-color:#FFF; 
         .img-box {
           width: 50%;
         }
         .txt-box {
           display: flex;
           align-self: center;
+          align-items:center;
+          text-align:center;
           height: auto;
           width: 50%;
         }
