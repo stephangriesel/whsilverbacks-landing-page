@@ -69,6 +69,8 @@ const Wrapper = styled(motion.main)`
       /* height: 100vh; */
       display: flex;
       flex-direction: column-reverse;
+      position:relative;
+      z-index:-2;
       .img-box {
         display: flex;
         flex-direction: column;
@@ -76,6 +78,16 @@ const Wrapper = styled(motion.main)`
         justify-content: center;
         align-content: center;
         width: 100%;
+      }
+      .img-box::after {
+        content:'';
+        position:absolute;
+        z-index:-1;
+        bottom:-30px;
+        left:25px;
+        width:30%;
+        height:100%;
+        background:#d2e2e2;
       }
       .txt-box {
         width: 100%;
@@ -98,6 +110,8 @@ const Wrapper = styled(motion.main)`
     }
     .two-column-alt {
       /* height: 100vh; */
+      position:relative;
+      z-index:-3;
       display: flex;
       flex-direction: column-reverse;
       .img-box {
@@ -107,6 +121,17 @@ const Wrapper = styled(motion.main)`
         justify-content: center;
         align-content: center;
         width: 100%;
+        position: relative;
+      }
+      .img-box::after {
+        content:'';
+        position:absolute;
+        z-index:-1;
+        bottom:-24px;
+        left:30px;
+        width:60%;
+        height:100%;
+        background:#eccecc;
       }
       .txt-box {
         text-align:center;
