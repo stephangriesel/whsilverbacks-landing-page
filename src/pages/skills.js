@@ -82,11 +82,11 @@ const Wrapper = styled(motion.main)`
       .img-box::after {
         content:'';
         position:absolute;
-        z-index:-1;
-        bottom:-30px;
-        left:25px;
-        width:30%;
-        height:100%;
+        z-index:-6;
+        bottom:110px;
+        left:80px;
+        width:80%;
+        height:80%;
         background:#d2e2e2;
       }
       .txt-box {
@@ -128,8 +128,8 @@ const Wrapper = styled(motion.main)`
         position:absolute;
         z-index:-1;
         bottom:-24px;
-        left:30px;
-        width:60%;
+        left:50px;
+        width:80%;
         height:100%;
         background:#eccecc;
       }
@@ -184,9 +184,20 @@ const Wrapper = styled(motion.main)`
       .two-column {
         display: flex;
         flex-direction:row-reverse;
+        position:relative;
         .img-box {
           width: 50%;
         }
+        .img-box::after {
+          content:'';
+          position:absolute;
+          z-index:-1;
+          bottom:-30px;
+          left:195px;
+          width:30%;
+          height:100%;
+          background:#d2e2e2;
+          }
         .txt-box {
           display: flex;
           align-self: center;
@@ -202,6 +213,16 @@ const Wrapper = styled(motion.main)`
         .img-box {
           width: 50%;
         }
+        .img-box::after {
+        content:'';
+        position:absolute;
+        z-index:-1;
+        bottom:-24px;
+        left:75px;
+        width:60%;
+        height:100%;
+        background:#eccecc;
+      }
         .txt-box {
           display: flex;
           align-self: center;
