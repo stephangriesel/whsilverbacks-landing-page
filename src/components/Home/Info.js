@@ -1,10 +1,11 @@
 import React from 'react'
 // import { Link } from 'gatsby'
 import Title from '../Globals/Title'
+import styled from 'styled-components'
 
 export default function Info() {
     return (
-        <section>
+        <Background>
             {/* <div className={styles.sticky}> */}
             <section className="py-5">
                 <div className="container"></div>
@@ -13,7 +14,7 @@ export default function Info() {
                     <div className="col-10 col-sm-8 mx-auto text-center">
                         <p className="lead text-muted mb-5">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem commodi iusto, aspernatur rerum tempore ea error reprehenderit eveniet illo quisquam dolore culpa soluta libero aperiam corporis repudiandae consequuntur fugiat eligendi quos ad perspiciatis velit recusandae deserunt animi? Eligendi, atque! Eligendi molestias excepturi quae fugit deleniti illo quisquam possimus doloremque.
-                    </p>
+                        </p>
                         {/* <Link to="/about">
                             <button className="btn text-uppercase btn-yellowish">About</button>
                         </Link> */}
@@ -21,6 +22,10 @@ export default function Info() {
                 </div>
             </section>
             {/* </div> */}
-        </section>
+        </Background>
     )
 }
+
+const Background = styled.section`
+background:#d2e2e2;
+}`

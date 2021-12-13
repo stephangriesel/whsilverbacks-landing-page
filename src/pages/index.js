@@ -9,7 +9,7 @@ import BackgroundSection from "../components/Globals/BackgroundSection"
 import { Parallax, Background } from 'react-parallax';
 
 
-// import Info from '../components/Home/Info'
+import Info from '../components/Home/Info'
 import LatestProducts from "../components/Home/ProductHighlights"
 
 const IndexPage = ({ data }) => (
@@ -21,31 +21,43 @@ const IndexPage = ({ data }) => (
       styleClass="default-background"
     /> */}
     <Parallax
-      blur={{ min: -5, max: 5 }}
+      blur={{ min: -25, max: 5 }}
       bgImage={require('../images/default.jpg')}
-      bgImageAlt="the dog"
+      bgImageAlt="Workbench"
+      strength={-200}
+      style={{
+        height: '600px', backgroundColor: '#d2e2e2'
+      }}
+    >
+      <div style={{ height: '400px', backgroundColor: 'rgba(255,255,255,0.)' }}></div>
+    </Parallax>
+    <Parallax
+      blur={{ min: -15, max: 5 }}
       strength={-100}
+      style={{
+        height: '400px'
+      }}
+    >
+      <div style={{ height: '300px', backgroundColor: 'rgba(255,255,255,0.)' }}><Info /></div>
+    </Parallax>
+
+    <Parallax
+      blur={{ min: -5, max: 5 }}
+      bgImage={require('../images/main.jpg')}
+      bgImageAlt="the dog"
+      strength={-150}
       style={
         {
-          marginTop: '20px',
-          marginBottom: '20px',
+          marginTop: '0px',
         }
       }
     >
       {/* Blur transition from min to max */}
-      <div style={{ height: '700px', padding: '20px' }} />
+      <div style={{ height: '700px' }} />
     </Parallax>
-    <Parallax
-      blur={{ min: -15, max: 15 }}
-      bgImage={require('../images/main2.jpg')}
-      bgImageAlt="the dog"
-      strength={-200}
-    >
-      Blur transition from min to max
-      <div style={{ height: '400px' }} />
-    </Parallax>
+
     <LatestProducts />
-    {/* <Info /> */}
+
   </Layout>
 )
 
