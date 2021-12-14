@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import Footer from "../components/Globals/Footer"
 import SEO from "../components/seo"
 
 import BackgroundSection from "../components/Globals/BackgroundSection"
@@ -26,37 +27,55 @@ const IndexPage = ({ data }) => (
       bgImageAlt="Workbench"
       strength={-200}
       style={{
-        height: '600px', backgroundColor: '#d2e2e2'
+        height: '600px', backgroundColor: '#d2e2e2', backgroundColor: 'rgba(210,226,226,0.3)'
       }}
     >
-      <div style={{ height: '400px', backgroundColor: 'rgba(255,255,255,0.)' }}></div>
+      <div style={{ height: '400px', backgroundColor: 'rgba(210,226,226,0.)' }}></div>
     </Parallax>
     <Parallax
       blur={{ min: -15, max: 5 }}
       strength={-100}
       style={{
-        height: '400px'
+        height: '520px'
       }}
     >
-      <div style={{ height: '300px', backgroundColor: 'rgba(255,255,255,0.)' }}><Info /></div>
+      <div style={{ height: '320px', backgroundColor: 'rgba(210,226,226,0.)' }}><Info /></div>
     </Parallax>
 
     <Parallax
-      blur={{ min: -5, max: 5 }}
+      blur={{ min: -1, max: 1 }}
       bgImage={require('../images/main.jpg')}
       bgImageAlt="the dog"
       strength={-150}
       style={
         {
           marginTop: '0px',
+          backgroundColor: '#eccecc',
+          height: '500px'
         }
       }
     >
       {/* Blur transition from min to max */}
-      <div style={{ height: '700px' }} />
+      <div style={{ height: '300px' }} />
     </Parallax>
 
-    <LatestProducts />
+    <Parallax
+      blur={{ min: -1, max: 1 }}
+      strength={-150}
+      style={
+        {
+          marginTop: '0px',
+          height: '800px'
+        }
+      }
+    >
+      {/* Blur transition from min to max */}
+      <div style={{ height: '50px' }}><LatestProducts /></div>
+    </Parallax>
+
+
+
+    <Footer />
 
   </Layout>
 )

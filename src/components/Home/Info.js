@@ -27,5 +27,5 @@ export default function Info() {
 }
 
 const Background = styled.section`
-background:#d2e2e2;
+background:#FFFFFF;
 }`

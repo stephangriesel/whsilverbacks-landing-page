@@ -1,8 +1,9 @@
 import React from 'react'
+import styled from 'styled-components'
 
 export default function Footer() {
     return (
-        <footer className="footer py-3">
+        <FooterWrap className="footer py-3">
             <div className="container">
                 <div className="row">
                     <div className="col-10 mx-auto col-md-6 text-yellow text-center text-capatalize">
@@ -10,6 +11,13 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-        </footer>
+        </FooterWrap>
     )
 }
+
+const FooterWrap = styled.section`
+/* background:#FFFFFF; */
+section {
+    height:20px;
+}
+}`

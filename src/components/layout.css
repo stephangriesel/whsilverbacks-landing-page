@@ -22,11 +22,20 @@ h1 {
   --mainYellowish: #faf3ddff;
   --mainGreen: #b8f2e6ff;
   --mainBlue: #d2e2e2;
-  --mainGrey: ##4e5c5c;
+  --mainGrey: #4e5c5c;
   --mainWhite: #ffffffea;
   --mainOffWhite: #faf6d8;
   --mainDark: #4e5c5c;
   --mainRed: #d06843;
+}
+
+#gatsby-focus-wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.wrapper {
+  /* box-shadow: 0 0 50px rgb(236,206,204,0.5); */
 }
 
 body {
@@ -35,7 +44,7 @@ body {
 }
 
 section {
-  height: 80vh;
+  /* height: 80vh; */
 }
 
 .default-background {
@@ -264,6 +273,11 @@ section {
 @media only screen and (min-width: 600px) {
   .row-group {
     margin: 3rem 20rem;
+  }
+
+  #gatsby-focus-wrapper {
+    margin: 0 auto;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=layout.css.map */
