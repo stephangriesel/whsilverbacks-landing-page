@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Footer from "../components/Globals/Footer"
 import SEO from "../components/seo"
 
-import BackgroundSection from "../components/Globals/BackgroundSection"
+// import BackgroundSection from "../components/Globals/BackgroundSection"
 
 import { Parallax, Background } from 'react-parallax';
 
@@ -27,16 +27,21 @@ const IndexPage = ({ data }) => (
       bgImageAlt="Workbench"
       strength={-200}
       style={{
-        height: '600px', backgroundColor: '#d2e2e2', backgroundColor: 'rgba(210,226,226,0.3)'
+        height: '580px',
+        backgroundColor: '#d2e2e2',
       }}
     >
-      <div style={{ height: '400px', backgroundColor: 'rgba(210,226,226,0.)' }}></div>
+      <div style={{
+        height: '400px',
+        backgroundColor: 'rgba(210,226,226,0.)',
+        right: '20px'
+      }}></div>
     </Parallax>
     <Parallax
       blur={{ min: -15, max: 5 }}
       strength={-100}
       style={{
-        height: '520px'
+        height: '520px',
       }}
     >
       <div style={{ height: '320px', backgroundColor: 'rgba(210,226,226,0.)' }}><Info /></div>
@@ -65,15 +70,13 @@ const IndexPage = ({ data }) => (
       style={
         {
           marginTop: '0px',
-          height: '800px'
+          height: '100vh'
         }
       }
     >
       {/* Blur transition from min to max */}
       <div style={{ height: '50px' }}><LatestProducts /></div>
     </Parallax>
-
-
 
     <Footer />
 

@@ -1,19 +1,12 @@
-/* Colour Scheme 
-Red: #d06843
-Blue: #d2e2e2
-Pink: #eccecc
-DimGray: #4e5c5c
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@500&display=swap");
 h1 {
   font-family: 'Raleway', sans-serif;
 }
 
 * {
   font-family: 'Montserrat', sans-serif;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -23,11 +16,20 @@ h1 {
   --mainYellowish: #faf3ddff;
   --mainGreen: #b8f2e6ff;
   --mainBlue: #d2e2e2;
-  --mainGrey: ##4e5c5c;
+  --mainGrey: #4e5c5c;
   --mainWhite: #ffffffea;
   --mainOffWhite: #faf6d8;
   --mainDark: #4e5c5c;
   --mainRed: #d06843;
+}
+
+#gatsby-focus-wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.wrapper {
+  /* box-shadow: 0 0 50px rgb(236,206,204,0.5); */
 }
 
 body {
@@ -36,23 +38,35 @@ body {
 }
 
 section {
-  height: 80vh;
+  /* height: 80vh; */
 }
 
 .default-background {
   min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-position: center;
   background-size: cover;
 }
 
 .about-background {
   min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-position: center;
   /* background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255.255.255.0.5)); */
   background-size: cover;
@@ -66,6 +80,7 @@ section {
 .btn-pink:hover {
   background: var(--mainPink);
   color: var(--mainWhite);
+  -webkit-transition: ease-in 0.5s;
   transition: ease-in 0.5s;
 }
 
@@ -77,6 +92,7 @@ section {
 .btn-green:hover {
   background: var(--mainGreen);
   color: var(--mainDark);
+  -webkit-transition: ease-in 0.5s;
   transition: ease-in 0.5s;
 }
 
@@ -88,6 +104,7 @@ section {
 .btn-yellowish:hover {
   background: var(--mainYellowish);
   color: var(--mainDark);
+  -webkit-transition: ease-in 0.5s;
   transition: ease-in 0.5s;
 }
 
@@ -99,6 +116,7 @@ section {
 .btn-blue:hover {
   background: var(--mainBlue);
   color: var(--mainDark);
+  -webkit-transition: ease-in 0.5s;
   transition: ease-in 0.5s;
 }
 
@@ -116,21 +134,18 @@ section {
 }
 
 /* Treatment Page */
-
 .wrapper-listed-item {
   margin: 1rem;
 }
 
 /* Snipcart Overwites */
+.snip-layout .snip-footer {
+  background: var(--mainWhite) !important;
+}
 
-.snip-layout {
-  .snip-footer {
-    background: var(--mainWhite) !important;
-  }
-  .snip-footer__copyright {
-    font-size: 0 !important;
-    height: 20px;
-  }
+.snip-layout .snip-footer__copyright {
+  font-size: 0 !important;
+  height: 20px;
 }
 
 .snip-btn--highlight {
@@ -165,20 +180,28 @@ section {
 }
 
 /* Bootstrap Override*/
-
 .prd-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .prd-item-shop {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 /* Animations */
-
 .fade-in {
   -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -192,6 +215,7 @@ section {
     opacity: 1;
   }
 }
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -202,8 +226,7 @@ section {
 }
 
 .swing-in-top-fwd {
-  -webkit-animation: swing-in-top-fwd 1.5s
-    cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  -webkit-animation: swing-in-top-fwd 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   animation: swing-in-top-fwd 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
@@ -223,6 +246,7 @@ section {
     opacity: 1;
   }
 }
+
 @keyframes swing-in-top-fwd {
   0% {
     -webkit-transform: rotateX(-100deg);
@@ -243,5 +267,10 @@ section {
 @media only screen and (min-width: 600px) {
   .row-group {
     margin: 3rem 20rem;
+  }
+
+  #gatsby-focus-wrapper {
+    margin: 0 auto;
+    width: 100%;
   }
 }
