@@ -8,7 +8,7 @@ export default function LatestProducts() {
     <StaticQuery query={getLatestProducts} render={data => {
       return (
         <section>
-          <section className="py-5">
+          <section>
             <div className="container py-5">
               {/* <Title title="Latest ChipChop Products" /> */}
               <div className="row py-5">

@@ -13,7 +13,7 @@ export default function Info() {
                 <div className="row">
                     <div className="col-10 col-sm-8 mx-auto text-center">
                         <p className="lead text-muted mb-5">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem commodi iusto, aspernatur rerum tempore ea error reprehenderit eveniet illo quisquam dolore culpa soluta libero aperiam corporis repudiandae consequuntur fugiat eligendi quos ad perspiciatis velit recusandae deserunt animi? Eligendi, atque! Eligendi molestias excepturi quae fugit deleniti illo quisquam possimus doloremque.
+                            ChipChop is Meubelmaker Marc Lineham, Who has over 10 years experience making retail displays, furniture making and interior building. ChipChop is about sustainabilty, quality and craftsmanship. In collaboratiuon with you, the goal is create something unique that can be enjoyed for a long time.
                         </p>
                         {/* <Link to="/about">
                             <button className="btn text-uppercase btn-yellowish">About</button>

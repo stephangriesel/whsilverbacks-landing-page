@@ -34,7 +34,7 @@ const Products = ({ data }) => {
       <Labels>
         <div className="treatment-labels">
           <Button className="nav-btn" active={filter === 'All'} onClick={() => setFilter('All')}>All</Button>
-          <Button className="nav-btn" active={filter === 'Body'} onClick={() => setFilter('Body')}>Body</Button>
+          <Button className="nav-btn" active={filter === 'Body'} onClick={() => setFilter('Body')}>Coffee Table</Button>
           <Button className="nav-btn" active={filter === 'Eyes'} onClick={() => setFilter('Eyes')}>Eyes</Button>
           <Button className="nav-btn" active={filter === 'Face'} onClick={() => setFilter('Face')}>Face</Button>
           <Button className="nav-btn" active={filter === 'Feet'} onClick={() => setFilter('Feet')}>Feet</Button>
