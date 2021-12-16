@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => (
       bgImageAlt="Workbench"
       strength={-200}
       style={{
-        height: '580px',
+        height: '680px',
         backgroundColor: '#d2e2e2',
       }}
     >
@@ -41,10 +41,10 @@ const IndexPage = ({ data }) => (
       blur={{ min: -15, max: 5 }}
       strength={-100}
       style={{
-        height: '520px',
+
       }}
     >
-      <div style={{ height: '320px', backgroundColor: 'rgba(210,226,226,0.)' }}><Info /></div>
+      <div style={{ backgroundColor: 'rgba(210,226,226,0.)' }}><Info /></div>
     </Parallax>
 
     <Parallax
@@ -56,12 +56,12 @@ const IndexPage = ({ data }) => (
         {
           marginTop: '0px',
           backgroundColor: '#eccecc',
-          height: '500px'
+          height: '650px'
         }
       }
     >
       {/* Blur transition from min to max */}
-      <div style={{ height: '300px' }} />
+      <div style={{ height: '400px' }} />
     </Parallax>
 
     <Parallax
