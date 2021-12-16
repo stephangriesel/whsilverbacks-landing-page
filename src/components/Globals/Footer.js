@@ -16,9 +16,8 @@ export default function Footer() {
 }
 
 const FooterWrap = styled.section`
-/* background:#FFFFFF; */
+
 section {
-    height:100px;
-    box-shadow: 0px 10px 5px #888, 0px -10px 5px #888;
+
 }
 }`

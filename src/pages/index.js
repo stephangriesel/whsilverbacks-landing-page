@@ -70,12 +70,11 @@ const IndexPage = ({ data }) => (
       style={
         {
           marginTop: '0px',
-          height: '100vh'
         }
       }
     >
       {/* Blur transition from min to max */}
-      <div style={{ height: '50px' }}><LatestProducts /></div>
+      <div style={{}}><LatestProducts /></div>
     </Parallax>
 
     <Footer />

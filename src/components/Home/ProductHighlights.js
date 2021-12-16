@@ -8,16 +8,14 @@ export default function LatestProducts() {
     <StaticQuery query={getLatestProducts} render={data => {
       return (
         <section>
-          <section>
-            <div className="container py-5">
-              {/* <Title title="Latest ChipChop Products" /> */}
-              <div className="row py-5">
-                {data.latestProducts.edges.map(({ node: product }) => {
-                  return <Product key={product.id} product={product} />
-                })}
-              </div>
+          <div className="container py-5">
+            {/* <Title title="Latest ChipChop Products" /> */}
+            <div className="row py-5">
+              {data.latestProducts.edges.map(({ node: product }) => {
+                return <Product key={product.id} product={product} />
+              })}
             </div>
-          </section>
+          </div>
         </section>
 
       )
