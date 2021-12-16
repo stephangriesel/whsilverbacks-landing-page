@@ -22,15 +22,22 @@ export default function Info() {
 }
 
 const Background = styled.section`
-background:#FFFFFF;
-
 .info-section {
-    height:85vh;
+    background:#ececec;
+    height:65vh;
+    display:flex;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
+    flex-direction:column;
+    border-radius:80px;
+    margin:50px;
 }
 
 @media (min-width: 800px) {
 .info-section {
-    height:40vh;
+    height:60vh;
+    margin:50px 200px;
 }
 }
 }`
