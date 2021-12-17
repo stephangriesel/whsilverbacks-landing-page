@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { Link } from "gatsby"
 import logo from '../../images/logo.svg'
 import "../css/navbar.css"
-// import { FaShoppingCart } from 'react-icons/fa'
+import { FaShoppingCart } from 'react-icons/fa'
 
 export default class Navbar extends Component {
   state = {
@@ -40,13 +40,13 @@ export default class Navbar extends Component {
   navbarHandler = () => {
     this.state.navbarOpen
       ? this.setState({
-          navbarOpen: false,
-          css: "collapse navbar-collapse",
-        })
+        navbarOpen: false,
+        css: "collapse navbar-collapse",
+      })
       : this.setState({
-          navbarOpen: true,
-          css: "collapse navbar-collapse show",
-        })
+        navbarOpen: true,
+        css: "collapse navbar-collapse show",
+      })
   }
 
   render() {
@@ -73,9 +73,9 @@ export default class Navbar extends Component {
                 </li>
               )
             })}
-            {/* <li className="nav-item ml-sm-5 cart-icon toggle">
-                            <button className="snipcart-checkout"><span className="bag"><FaShoppingCart /></span></button>
-                        </li> */}
+            <li className="nav-item ml-sm-5 cart-icon toggle">
+              <button className="snipcart-checkout"><span className="bag"><FaShoppingCart /></span></button>
+            </li>
           </ul>
         </div>
       </nav>

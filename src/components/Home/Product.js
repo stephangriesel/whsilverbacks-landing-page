@@ -1,10 +1,11 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
 
 export default function Product({ product }) {
     return (
-        <div className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3">
-            <div className="card" style={{ minHeight: "100%" }}>
+        <Card className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3">
+            <div className="card" style={{}}>
                 <Img fluid={product.image.fluid} className="card-img-top" />
                 <div className="card-body text-center">
                     <h6>{product.title}</h6>
@@ -19,5 +20,19 @@ export default function Product({ product }) {
                     >Add</button>
                 </div>
             </div>
-        </div>);
+        </Card>
+
+    );
 }
+
+const Card = styled.div`
+background:transparent;
+border-radius: 80px;
+.card {
+    /* border-radius:20%; */
+    min-height:100%;
+    box-shadow:  13px 13px 26px #d4d4d4, 
+             -13px -13px 26px #ffffff;
+    
+}
+`
