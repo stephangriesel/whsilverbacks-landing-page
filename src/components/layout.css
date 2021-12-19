@@ -24,8 +24,7 @@ h1 {
 }
 
 #gatsby-focus-wrapper {
-  /* margin: 0 auto;
-  width: 80%; */
+  margin: 0 auto;
 }
 
 .wrapper {
@@ -139,6 +138,10 @@ section {
 }
 
 /* Snipcart Overwites */
+.cart-icon button {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
 .snip-layout .snip-footer {
   background: var(--mainWhite) !important;
 }
@@ -158,7 +161,7 @@ section {
 }
 
 .snipcart-checkout {
-  background: var(--mainWhite) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
 }
 
 .snip-header {
