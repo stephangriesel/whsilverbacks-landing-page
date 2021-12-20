@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Footer from "../components/Globals/Footer"
 
 // import BackgroundSection from '../components/Globals/BackgroundSection';
 
@@ -18,6 +19,7 @@ const Shop = ({ data }) => (
       styleClass="about-background"
     /> */}
     <Products products={data.product} />
+    <Footer />
   </Layout >
 );
 

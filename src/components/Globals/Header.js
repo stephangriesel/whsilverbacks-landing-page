@@ -27,8 +27,9 @@ const Wrapper = styled.div`
 z-index:999;
 position: sticky;
 top:0;
+margin-bottom:8em;
 .header {
-  /* height:5em; */
+  height:5em;
 }
 .small {
   /* height:3em; */

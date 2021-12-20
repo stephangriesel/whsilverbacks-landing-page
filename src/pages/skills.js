@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
 import { useScroll } from '../components/useScroll';
+import Footer from "../components/Globals/Footer"
 import SkillsOne from '../components/Skills/SkillsOne';
 import SkillsTwo from '../components/Skills/SkillsTwo';
 import SkillsThree from '../components/Skills/SkillsThree';
@@ -25,6 +26,7 @@ const Skills = (props) => {
             <div className='spacer'></div>
           </div>
         </motion.div>
+        <Footer />
       </Layout>
     </Wrapper>
   )
@@ -33,8 +35,8 @@ const Skills = (props) => {
 const Wrapper = styled(motion.main)`
   min-height: calc(100vh - 5rem);
   margin-top: -5rem;
-  margin: 0 2em;
   .skills-wrapper {
+    margin: 0 2em;
     margin-top: 3em;
     .image-block {
       /* height: 400px; */
