@@ -24,7 +24,7 @@ export default function Footer() {
                                 height="24"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                class="fb-icon"
+                                className="fb-icon"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
@@ -38,7 +38,7 @@ export default function Footer() {
                                 height="24"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                class="ig-icon"
+                                className="ig-icon"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
@@ -72,8 +72,8 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-10 mx-auto col-md-6 text-yellow text-center text-capatalize pt-5">
-                        <h6>{new Date().getFullYear().toString()}</h6>
+                    <div className="col-10 mx-auto col-md-6 text-center text-capatalize pt-5">
+                        <small>ChipChop {new Date().getFullYear().toString()}</small>
                     </div>
                 </div>
             </div>
@@ -87,12 +87,32 @@ color: var(--mainDark);
 ul {
     list-style:none;
 }
-
 .container {
     margin:30px;
     display:flex;
     flex-direction:column;
-    flex-wrap:wrap;
+    .blocks {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        .block {
+            h5 {
+                font-weight:600;
+            }
+            ul {
+                list-style:none;
+            }
+            p,li {
+                margin:10px 0px;
+                padding:0;
+                font-size:12px;
+            }
+            width:100%;
+            display:flex;
+            flex-direction:column;
+            align-items:flex-start;
+        }
+    }
     .socials {
         .fb-icon, .ig-icon {
             background:white;
@@ -112,20 +132,14 @@ ul {
         height:250px;
         width:100%;
         .block {
-            h5 {
-                font-weight:600;
-            }
-            ul {
-                list-style:none;
-            }
-            p,li {
-                margin:10px 0px;
-                padding:0;
-                font-size:12px;
-            }
+            display:flex;
+            align-items:start;
+            align-content:left;
+            justify-content:left;
             display:flex;
             flex-direction:column;
             width:50%;
+            margin-right:20px;
         }
     }
     .socials {

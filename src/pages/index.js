@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => (
       styleClass="default-background"
     /> */}
     <Parallax
-      blur={{ min: -25, max: 5 }}
+      blur={{ min: -5, max: 0 }}
       bgImage={require('../images/default.jpg')}
       bgImageAlt="Workbench"
       strength={-200}
