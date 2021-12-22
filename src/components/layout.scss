@@ -1,3 +1,10 @@
+/* Colour Scheme 
+Red: #d06843
+Blue: #d2e2e2
+Pink: #ebccca
+DimGray: #4b5b5a
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@500&display=swap");
 h1 {
   font-family: 'Raleway', sans-serif;
@@ -12,11 +19,11 @@ h1 {
 }
 
 :root {
-  --mainPink: #eccecc;
+  --mainPink: #ebccca;
   --mainYellowish: #faf3ddff;
   --mainGreen: #b8f2e6ff;
   --mainBlue: #d2e2e2;
-  --mainGrey: #4e5c5c;
+  --mainGrey: #4b5b5a;
   --mainWhite: #ffffffea;
   --mainOffWhite: #faf6d8;
   --mainDark: #4e5c5c;
@@ -156,7 +163,7 @@ section {
 
 .snip-btn--highlight {
   color: var(--mainDark) !important;
-  background: var(--mainYellowish) !important;
+  background: var(--mainPink) !important;
 }
 
 .snip-ico--close {
@@ -182,7 +189,7 @@ section {
 }
 
 .snip-header__total {
-  background: var(--mainYellowish) !important;
+  background: var(--mainPink) !important;
 }
 
 /* Bootstrap Override*/
