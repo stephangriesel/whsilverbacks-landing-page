@@ -28,6 +28,7 @@ z-index:999;
 position: sticky;
 top:0;
 margin-bottom:8em;
+/* margin-top:6em; */
 .header {
   height:5em;
 }

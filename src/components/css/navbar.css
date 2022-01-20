@@ -13,6 +13,7 @@ DimGray: #eccecc
   max-width: 980px;
   width: 100%;
   margin: 1em auto;
+  margin-top: 0;
 }
 
 .navbar-nav {
@@ -40,6 +41,7 @@ DimGray: #eccecc
 
 .navbar-nav .nav-link {
   position: relative;
+  padding: 0 1em !important;
 }
 
 .navbar-nav .nav-link::after {

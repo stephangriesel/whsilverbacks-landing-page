@@ -10,26 +10,26 @@ export default class Navbar extends Component {
     navbarOpen: false,
     css: "collapse navbar-collapse",
     links: [
-      {
-        id: 1,
-        path: "/",
-        text: "home",
-      },
       // {
-      //   id: 2,
-      //   path: "/products",
-      //   text: "products",
+      //   id: 1,
+      //   path: "/",
+      //   text: "home",
       // },
       {
-        id: 3,
-        path: "/skills",
-        text: "skills"
+        id: 2,
+        path: "/about",
+        text: "about",
       },
       {
-        id: 4,
-        path: "/shop",
-        text: "shop",
+        id: 3,
+        path: "/portfolio",
+        text: "portfolio"
       },
+      // {
+      //   id: 4,
+      //   path: "/shop",
+      //   text: "shop",
+      // },
       {
         id: 5,
         path: "/contact",

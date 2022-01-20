@@ -37,7 +37,7 @@ const Wrapper = styled(motion.main)`
   margin-top: -5rem;
   .skills-wrapper {
     margin: 0 2em;
-    margin-top: 3em;
+    margin-top: 12em;
     .image-block {
       /* height: 400px; */
       /* position: relative; */

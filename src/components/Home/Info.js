@@ -12,7 +12,7 @@ export default function Info() {
                 <div className="row">
                     <div className="col-10 col-sm-8 mx-auto text-center">
                         <p className="lead text-muted mb-5">
-                            ChipChop is Meubelmaker Marc Lineham, Who has over 10 years experience making retail displays, furniture making and interior building. ChipChop is about sustainabilty, quality and craftsmanship. In collaboratiuon with you, the goal is create something unique that can be enjoyed for a long time.
+                        Chipchop Amsterdam was founded in 2015 by Ma­rc Lineham. Yet it was way earlier that the self-taught hobbyist started gaining professional woodworking experience: pretty much at the same time as he started growing his iconic beard. Through his constant delivery of high-quality furniture, bespoke shop displays and stylish interior designs, he kept his customers coming back for more.
                         </p>
                     </div>
                 </div>
