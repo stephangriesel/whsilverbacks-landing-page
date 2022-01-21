@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Navbar from './Navbar'
+// import Navbar from './Navbar'
+import Navigation from './Navigation'
 import styled from 'styled-components'
 
 export default function Header() {
@@ -17,7 +18,8 @@ export default function Header() {
     <Wrapper>
       <header className={`header ${small ? "small" : ""
         }`}>
-        <Navbar />
+        {/* <Navbar /> */}
+        <Navigation />
       </header>
     </Wrapper>
   );

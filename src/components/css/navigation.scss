@@ -1,0 +1,55 @@
+/* Colour Scheme 
+Red: #d06843
+Blue: #d2e2e2
+Pink: #eccecc
+DimGray: #eccecc
+*/
+
+.logo {
+  width: 8em;
+  height: auto;
+}
+
+.navigation {
+  max-width: 980px;
+  width: 100%;
+  margin: 1em auto;
+  margin-top:0;
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  .cart-icon {
+    display: flex;
+    button {
+      border: none;
+    }
+  }
+  .bag {
+    padding: 0.5em;
+  }
+  .nav-link {
+    position: relative;
+    padding:0 1em !important;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 60%;
+    height: 1px;
+    opacity: 0;
+    background-color: var(--mainGrey);
+    transform: translate(-50%, 0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+    opacity: 1;
+  }
+}
