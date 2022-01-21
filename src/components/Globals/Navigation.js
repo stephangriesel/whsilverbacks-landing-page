@@ -50,4 +50,8 @@ function Navigation(){
   )
 }
 
+const Wrapper = styled.div`
+
+`
+
 export default Navigation;
