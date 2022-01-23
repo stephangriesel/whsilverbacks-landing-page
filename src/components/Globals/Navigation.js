@@ -4,7 +4,7 @@ import logo from '../../images/logo.svg'
 import "../css/navigation.css"
 import { FaShoppingCart } from 'react-icons/fa'
 import styled from 'styled-components';
-import Dropdown from './Dropdown'
+import Dropdown from './Dropdown';
 
 function Navigation(){
   const [click, setClick] = useState(false)
@@ -13,10 +13,26 @@ function Navigation(){
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
 
+  const onMouseEnter = () => {
+    if(window.innerWidth < 960) {
+      setDropdown(false)
+    } else {
+      setDropdown(true)
+    }
+  }
+
+  const onMouseLeave = () => {
+    if(window.innerWidth < 960) {
+      setDropdown(false)
+    } else {
+      setDropdown(false)
+    }
+  }
+
   return(
     <Wrapper>
-      <nav className='navigation'>
-        <Link to="/" className='navigation-logo'>
+      <nav className='nav-bar'>
+        <Link to="/" className='navbar-logo'>
           <img className="logo" src={logo} alt="logo" />
         </Link>
         <div className="menu-icon" onClick={handleClick}>
@@ -28,7 +44,10 @@ function Navigation(){
               Home
             </Link>
           </li>
-          <li className='nav-item'>
+          <li className='nav-item'
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          >
             <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
               About <i className='fas fa-caret-down' />
             </Link>
@@ -51,8 +70,8 @@ function Navigation(){
 }
 
 const Wrapper = styled.div`
-.navigation {
-  /* background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%); */
+.nav-bar {
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   height: 200px;
   display: flex;
   justify-content: center;
@@ -106,7 +125,7 @@ const Wrapper = styled.div`
 }
 
 @media screen and (max-width: 960px) {
-  .navigationItems {
+  .NavbarItems {
     position: relative;
   }
 
@@ -142,7 +161,7 @@ const Wrapper = styled.div`
     border-radius: 0;
   }
 
-  .navigation-logo {
+  .navbar-logo {
     position: absolute;
     top: 0;
     left: 0;
