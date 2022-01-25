@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from "gatsby"
-import { MenuItems } from "./MenuItems"
-import "../css/dropdown.css"
+import { Link } from "gatsby";
+import { MenuItems } from "./MenuItems";
+import "../css/dropdown.css";
 import styled from 'styled-components';
 
 function Dropdown(){
@@ -28,33 +28,37 @@ function Dropdown(){
 
 const Wrapper = styled.div`
   .dropdown-menu {
+    display:block;
     width:200px;
     position:absolute;
+    z-index:5000;
     top:80px;
     list-style:none;
     text-align:start;
-    li {
-      background:#fff;
-      cursor:pointer;
-    }
-
-    li:hover {
-      background:#979797;
-    }
-    
-    dropdown-menu.clicked {
-      display:none;
-    }
-
-    dropdown-link {
-      display:block;
-      width:100%;
-      height:100%
-      text-decoration:none;
-      color:#fff;
-      padding:16px;
-    }
   }
+
+  .dropdown-menu li {
+    background:red;
+    cursor:pointer;
+  }
+
+  .dropdown-menu li:hover {
+    background:red;
+  }
+
+  .dropdown-menu.clicked {
+    display:none;
+  }
+
+  .dropdown-link {
+    display:block;
+    width:100%;
+    height:100%;
+    text-decoration:none;
+    color:#fff;
+    padding:16px;
+  }
+
 `
 
 export default Dropdown;
