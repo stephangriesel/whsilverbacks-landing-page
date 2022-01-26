@@ -170,10 +170,11 @@ const Wrapper = styled.div`
   .menu-icon {
     display: block;
     position: absolute;
-    top: 0px;
+    color:#000;
+    background:red;
+    top: 0;
     right: 0;
     transform: translate(-100%, 100%);
-    z-index:2000;
     font-size: 1.8rem;
     cursor: pointer;
   }

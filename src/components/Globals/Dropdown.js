@@ -31,8 +31,6 @@ const Wrapper = styled.div`
     display:block;
     width:200px;
     position:absolute;
-    z-index:5000;
-    top:80px;
     list-style:none;
     text-align:start;
   }
