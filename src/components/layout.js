@@ -7,12 +7,9 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
-import './bootstrap.min.css';
 import "./layout.css"
-// import Navbar from './Globals/Navbar';
 import Header from './Globals/Header'
-// import Footer from './Globals/Footer';
+import './bootstrap.min.css';
 
 const Layout = ({ children }) =>
 
@@ -20,8 +17,6 @@ const Layout = ({ children }) =>
     <Header />
     <div className="wrapper">
       {children}
-
-      {/* <Footer /> */}
     </div>
   </>
 

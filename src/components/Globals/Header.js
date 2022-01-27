@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import Navbar from './Navbar'
-import Navigation from './Navigation'
+import Nav from './Nav'
 import styled from 'styled-components'
 
 export default function Header() {
@@ -18,8 +17,7 @@ export default function Header() {
     <Wrapper>
       <header className={`header ${small ? "small" : ""
         }`}>
-        {/* <Navbar /> */}
-        <Navigation />
+        <Nav />
       </header>
     </Wrapper>
   );
@@ -33,10 +31,11 @@ top:0;
 margin-bottom:3em;
 .header {
   height:auto;
+  transition:ease-in-out 1s;
 }
 .small {
   .logo {
-  height:7em;
+  height:5em;
 }
 }
 `
