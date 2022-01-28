@@ -83,7 +83,8 @@ section {
 
 .btn-pink {
   color: var(--mainGrey);
-  border-color: var(--mainPink);
+  border-color: var(--mainPink) solid;
+  background-color: var(--mainGrey);
 }
 
 .btn-pink:hover {

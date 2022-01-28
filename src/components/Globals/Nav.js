@@ -21,11 +21,11 @@ function Nav(){
             <li className='nav-item dropdown'>
               <a className='nav-link dropdown-toggle' id="navbarDropdown" role="button" data-toggle="dropdown" href="/">About</a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item small" href="">Why ChipChop</a>
+                <a className="dropdown-item small" href="/why">Why ChipChop</a>
                 <div className="dropdown-divider" ></div>
-                <a className="dropdown-item small" href="">Approach</a>
+                <a className="dropdown-item small" href="/approach">Approach</a>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item small" href="">Core Values</a>
+                <a className="dropdown-item small" href="/corevalues">Core Values</a>
               </div>
             </li>
             <li className='nav-item'>
@@ -45,6 +45,9 @@ function Nav(){
 }
 
 const Wrapper = styled.div`
+a:active {
+  background-color: var(--mainBlue) !important;
+}
 .navbar {
   background:rgba(255,255,255,0.8) !important;
 }

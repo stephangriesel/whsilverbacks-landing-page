@@ -24,13 +24,13 @@ export default function Header() {
 }
 
 const Wrapper = styled.div`
-background:rgba(255,255,255,0.8);
 z-index:1;
 position: sticky;
 top:0;
 margin-bottom:3em;
 .header {
-  height:auto;
+  background:none;
+  height:9em;
   transition:ease-in-out 1s;
 }
 .small {
