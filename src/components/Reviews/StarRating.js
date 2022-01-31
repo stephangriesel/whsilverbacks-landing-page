@@ -1,8 +1,10 @@
 import React from 'react';
 import {useState} from 'react';
-import Star from './Star';
+import Star from '../Home/Star';
 
-function ProductReview({ onChange }) {
+import styled from 'styled-components'
+
+function StarRating({ onChange }) {
   const [rating, setRating] = useState(0);
 
   const changeRating = (newRating) => {
@@ -11,7 +13,7 @@ function ProductReview({ onChange }) {
   }
 
   return (
-    <span>
+    <Wrapper>
       {[1, 2, 3, 4, 5].map((value) => (
         <Star
           key={value}
@@ -19,8 +21,13 @@ function ProductReview({ onChange }) {
           onClick={() => changeRating(value)}
         />
       ))}
-    </span>
+    </Wrapper>
   );
 }
 
-export default ProductReview;
+const Wrapper = styled.div `
+width:100%;
+text-align:center;
+`
+
+export default StarRating;
