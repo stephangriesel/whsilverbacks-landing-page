@@ -1,3 +1,4 @@
+import React from 'react';
 import { FaPencilAlt, FaTimes } from 'react-icons/fa';
 import styled from 'styled-components';
 
