@@ -9,17 +9,17 @@ import SEO from "../components/seo"
 import { Parallax, Background } from 'react-parallax';
 
 
-import Info1 from '../components/Home/InfoCompany1'
-import Info2 from '../components/Home/InfoCompany2'
-import Info3 from '../components/Home/InfoCompany3'
+import Info7 from '../components/Home/InfoCompany7'
+import Info8 from '../components/Home/InfoCompany8'
+import Info9 from '../components/Home/InfoCompany9'
 
 const whyPage = ({ data }) => (
   <Layout>
     <SEO title="Why ChipChop" />
-    <div style={{ backgroundColor: 'rgba(210,226,226,0.)' }}><Info1 /></div>
+    <div style={{ backgroundColor: 'rgba(210,226,226,0.)' }}><Info7 /></div>
     <Parallax
       blur={{ min: -5, max: 0 }}
-      bgImage={require('../images/info1.jpg')}
+      bgImage={require('../images/info5.jpg')}
       bgImageAlt="Workbench"
       strength={-200}
       style={{
@@ -42,11 +42,11 @@ const whyPage = ({ data }) => (
     >
     </Parallax>
 
-    <div style={{ backgroundColor: 'rgba(210,226,226,0.)' }}><Info2 /></div>
+    <div style={{ backgroundColor: 'rgba(210,226,226,0.)' }}><Info8 /></div>
 
     <Parallax
       blur={{ min: -5, max: 0 }}
-      bgImage={require('../images/info2.jpg')}
+      bgImage={require('../images/info6.jpg')}
       bgImageAlt="Workbench"
       strength={-200}
       style={{
@@ -69,7 +69,7 @@ const whyPage = ({ data }) => (
     >
     </Parallax>
 
-    <div style={{ backgroundColor: 'rgba(210,226,226,0.)' }}><Info3 /></div>
+    <div style={{ backgroundColor: 'rgba(210,226,226,0.)' }}><Info9 /></div>
 
     <Footer />
 
