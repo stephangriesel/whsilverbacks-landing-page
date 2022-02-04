@@ -9,14 +9,18 @@ export default function Info() {
         {/* <Title title="WHY CHIPCHOP"></Title> */}
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
-              <ol className="lead text-muted mb-5">
-                <li>CONTACT: Get in touch for an initial conversation about your ideas and needs.</li>
-                <li>ESTIMATE: We’ll get back to you with a project outline and a cost estimate.</li>
-                <li>DESIGN: Let us create the final design and give you a quote to sign off on.</li>
-                <li>PRODUCTION: As we frequently share visual updates, you can oversee our progress.</li>
-                <li>INSTALLATION: We deliver and install the finalized product with the greatest care.</li>
-                <li>AFTERCARE: Should any problem arise, feel free to contact us and have us fix it.</li>
-              </ol>
+              <div className="lead text-muted mb-5">
+                <p className='flex-column'>
+                  <span className="number">1</span>
+                  <span class="bold">CONTACT:</span> 
+                  Get in touch for an initial conversation about your ideas and needs.
+                </p>
+                <p>ESTIMATE: We’ll get back to you with a project outline and a cost estimate.</p>
+                <p>DESIGN: Let us create the final design and give you a quote to sign off on.</p>
+                <p>PRODUCTION: As we frequently share visual updates, you can oversee our progress.</p>
+                <p>INSTALLATION: We deliver and install the finalized product with the greatest care.</p>
+                <p>AFTERCARE: Should any problem arise, feel free to contact us and have us fix it.</p>
+              </div>
           </div>
         </div>
       </section>
@@ -51,9 +55,23 @@ const Background = styled.section`
              -13px -13px 26px #ffffff;
 }
 
+.flex-column {
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  .number {
+    border:1px solid #000;
+    width:1em;
+    padding:1em;
+    margin:1em;
+    transform:rotate(-12deg);
+  }
+}
+
 @media (min-width: 800px) {
 .info-section {
-    height:60vh;
+    height:auto;
     margin:50px 20px;
 }
 }

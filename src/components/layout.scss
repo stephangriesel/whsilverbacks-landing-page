@@ -39,6 +39,15 @@ a {
   // width: 80%;
 }
 
+.bold {
+  font-weight:900;
+}
+
+.flex-column {
+  display:flex;
+  flex-direction: column;
+}
+
 .wrapper {
   /* box-shadow: 0 0 50px rgb(236,206,204,0.5); */
 }

@@ -12,7 +12,7 @@ export default function Info() {
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
             <p className="lead text-muted mb-5">
-              <strong>HOW WE CREATE REAL VALUE</strong> - While creating your valuable products, we always stick to our core values in a pretty hardcore fashion.
+              <strong className='bold'>HOW WE CREATE REAL VALUE</strong> - While creating your valuable products, we always stick to our core values in a pretty hardcore fashion.
             </p>
           </div>
         </div>
