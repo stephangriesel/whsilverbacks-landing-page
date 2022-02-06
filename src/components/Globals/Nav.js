@@ -52,7 +52,7 @@ a:active {
   background:rgba(255,255,255,0.8) !important;
 }
 .navbar-brand {
-  width:30%;
+  width:45%;
   text-align:center;
 }
 .navbar-brand img {

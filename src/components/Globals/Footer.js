@@ -84,6 +84,8 @@ export default function Footer() {
 const FooterWrapper = styled.div`
 background:rgba(236,236,236,0.5);
 color: var(--mainDark);
+display:flex;
+justify-content:space-evenly;
 ul {
     list-style:none;
 }
