@@ -16,7 +16,7 @@ export default function Info() {
               type="submit"
               className="btn btn-pink btn-block text-capitalize mt-5"
             >
-              Feel free to contact us
+              CONTACT US
             </button>
           </div>
         </div>

@@ -9,13 +9,28 @@ export default function Info() {
         {/* <Title title="WHY CHIPCHOP"></Title> */}
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
-              <ul className="lead text-muted mb-5">
-                <li>HIGH QUALITY: Everything we make, is built to last, even with intensive daily use.</li>
-                <li>GOOD DESIGN: Our designs are always pleasing to look at, easy to get and intuitive to use.</li>
-                <li>CUSTOMER SERVICE: We are on a journey to make customers happy with custom-made happiness.</li>
-                <li>BIG FUN: When crafting our products, we put the ‘fun’ back into ‘functionality’.</li>
-                <li>EPIC SUSTAINABILITY: Our materials are ethically sourced and our output is epically durable.</li>
-              </ul>
+          <div className="lead text-muted mb-5">
+              <p className='flex-column'>
+                  <span className="number">HIGH QUALITY</span>
+                  Everything we make, is built to last, even with intensive daily use.
+                </p>
+                <p className='flex-column'>
+                  <span className="number">GOOD DESIGN</span>
+                  Our designs are always pleasing to look at, easy to get and intuitive to use.
+                </p>
+                <p className='flex-column'>
+                  <span className="number">CUSTOMER SERVICE</span>
+                  We are on a journey to make customers happy with custom-made happiness.
+                </p>
+                <p className='flex-column'>
+                  <span className="number">BIG FUN</span>
+                  When crafting our products, we put the ‘fun’ back into ‘functionality’.
+                </p>
+                <p className='flex-column'>
+                  <span className="number">EPIC SUSTAINABILITY</span>
+                  Our materials are ethically sourced and our output is epically durable
+                </p>
+                </div>
           </div>
         </div>
       </section>
@@ -50,10 +65,31 @@ const Background = styled.section`
              -13px -13px 26px #ffffff;
 }
 
+.flex-column {
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  .number {
+    background-color:var(--mainPink);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:0px solid #000;
+    font-size:1em;
+    padding:0.5em;
+    margin:0.5em;
+    transform:rotate(-0deg);
+    border-radius:10px;
+    -webkit-box-shadow: 15px 17px 28px -19px #4B5B5A; 
+    box-shadow: 15px 17px 28px -19px #4B5B5A;
+  }
+}
+
 @media (min-width: 800px) {
 .info-section {
-    height:60vh;
-    margin:50px 20px;
+    height:120vh;
+    margin:100px 20px;
 }
 }
 `

@@ -46,7 +46,7 @@ function Nav(){
 
 const Wrapper = styled.div`
 a:active {
-  background-color: var(--mainBlue) !important;
+  background-color: var(--mainWhite) !important;
 }
 .navbar {
   background:rgba(255,255,255,0.8) !important;

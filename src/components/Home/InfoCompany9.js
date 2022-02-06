@@ -16,7 +16,7 @@ export default function Info() {
               type="submit"
               className="btn btn-pink btn-block text-capitalize mt-5"
             >
-              Get in touch
+              GET IN TOUCH
             </button>
           </div>
         </div>

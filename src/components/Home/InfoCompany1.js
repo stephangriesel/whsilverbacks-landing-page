@@ -34,7 +34,6 @@ const Background = styled.section`
     justify-content:center;
     flex-direction:column;
     border-radius:80px;
-    margin:50px;
     box-shadow:  13px 13px 26px #d4d4d4, 
              -13px -13px 26px #ffffff;
 }
@@ -42,7 +41,7 @@ const Background = styled.section`
 @media (min-width: 800px) {
 .info-section {
     height:60vh;
-    margin:50px 20px;
+    margin:100px 20px;
 }
 }
 `
