@@ -97,9 +97,9 @@ section {
 }
 
 .btn-pink {
-  color: var(--mainGrey);
-  border-color: var(--mainPink) solid;
-  background-color: var(--mainGrey);
+  color: var(--mainWhite) !important;
+  border-color: var(--mainPink) solid !important;
+  background-color: var(--mainGrey) !important;
 }
 
 .btn-pink a {
@@ -112,8 +112,8 @@ section {
 }
 
 .btn-pink:hover {
-  background: var(--mainPink);
-  color: var(--mainWhite);
+  background: var(--mainPink) !important;
+  color: var(--mainBlack) !important;
   -webkit-transition: ease-in 0.5s;
   transition: ease-in 0.5s;
 }

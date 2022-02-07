@@ -1,12 +1,13 @@
 import React from "react"
 import Title from "../Globals/Title"
 import Footer from "../Globals/Footer"
+import styled from "styled-components"
 
 export default function Contact() {
   return (
     <section className="contact py-3 fade-in">
       <Title title="Contact Us" />
-      <div className="row pb-5">
+      <div className="row pb-5 pt-5">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
           <form action="https://formspree.io/f/xknkjdon" method="POST">
             <div className="form-group">
