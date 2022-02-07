@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 export default function Info() {
   return (
@@ -16,7 +17,7 @@ export default function Info() {
               type="submit"
               className="btn btn-pink btn-block text-capitalize mt-5"
             >
-              CONTACT US
+              <Link to="/contact">CONTACT US</Link>
             </button>
           </div>
         </div>

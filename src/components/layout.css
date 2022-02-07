@@ -52,6 +52,7 @@ a {
 }
 
 .wrapper {
+  padding-top: 50px;
   /* box-shadow: 0 0 50px rgb(236,206,204,0.5); */
 }
 
@@ -99,6 +100,15 @@ section {
   color: var(--mainGrey);
   border-color: var(--mainPink) solid;
   background-color: var(--mainGrey);
+}
+
+.btn-pink a {
+  color: var(--mainWhite);
+}
+
+.btn-pink a:hover {
+  text-decoration: none;
+  color: var(--mainBlack);
 }
 
 .btn-pink:hover {

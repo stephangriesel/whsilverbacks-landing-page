@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link } from 'gatsby'
 import Title from '../Globals/Title'
 import styled from 'styled-components'
 
@@ -41,7 +40,7 @@ const Background = styled.section`
 @media (min-width: 800px) {
 .info-section {
     height:60vh;
-    margin:100px 20px;
+    margin:20px 20px;
 }
 }
 `

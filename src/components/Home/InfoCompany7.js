@@ -39,7 +39,7 @@ const Background = styled.section`
 @media (min-width: 800px) {
 .info-section {
     height:30vh;
-    margin:100px 20px;
+    margin:20px 20px;
 }
 }
 `

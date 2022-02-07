@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 export default function Info() {
   return (
     <Background>
       <section className="py-5 info-section">
         <div className="container"></div>
-        {/* <Title title="WHY CHIPCHOP"></Title> */}
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
             <p className="lead text-muted mb-5">
@@ -16,7 +16,7 @@ export default function Info() {
               type="submit"
               className="btn btn-pink btn-block text-capitalize mt-5"
             >
-              GET IN TOUCH
+              <Link to="/contact">GET IN TOUCH</Link>
             </button>
           </div>
         </div>

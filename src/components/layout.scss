@@ -97,6 +97,13 @@ section {
   color: var(--mainGrey);
   border-color: var(--mainPink) solid;
   background-color: var(--mainGrey);
+  a {
+    color:var(--mainWhite);
+    &:hover {
+      text-decoration:none;
+      color:var(--mainBlack);
+    }
+  }
 }
 
 .btn-pink:hover {

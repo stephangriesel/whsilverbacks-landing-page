@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'gatsby'
+import { Link } from 'gatsby'
 import Title from '../Globals/Title'
 import styled from 'styled-components'
 
@@ -18,7 +18,11 @@ export default function Info() {
                             type="submit"
                             className="btn btn-pink btn-block text-capitalize mt-5"
                         >
-                            TALK TO US
+                            <Link 
+                                to="/contact"
+                                >    
+                                   TALK TO US
+                            </Link>
                         </button>
                     </div>
                 </div>
