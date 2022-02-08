@@ -1,20 +1,39 @@
 import React from 'react'
 import styled from 'styled-components'
+import { motion } from "framer-motion";
 
 export default function Info() {
+  const [shouldShowActions, setShouldShowActions] = React.useState(false);
+  const [lastYPos, setLastYPos] = React.useState(0);
+
+  React.useEffect(() => {
+
+    function handleScroll(){
+      console.log('scrolled')
+      const yPos = window.scrollY;
+      const isScrollingUp = yPos < lastYPos;
+
+      setShouldShowActions(isScrollingUp);
+      setLastYPos(yPos);
+    }
+    window.addEventListener('scroll', handleScroll, false)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll, false)
+    }
+  }, [lastYPos]);
   return (
     <Background>
       <section className="py-5 info-section">
         <div className="container"></div>
-        {/* <Title title="WHY CHIPCHOP"></Title> */}
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
               <div className="lead text-muted mb-5">
-                <p className='flex-column'>
+                <motion.div className='flex-column' animate={{opacity: shouldShowActions ? 1 : 0}} initial={{opacity: 0}} transition={{ opacity: {duration: 0.2 }}}>
                   <span className="number">1</span>
                   <span class="bold">CONTACT</span> 
                   Get in touch for an initial conversation about your ideas and needs.
-                </p>
+                </motion.div>
                 <p className='flex-column'>
                   <span className="number">2</span>
                   <span class="bold">ESTIMATE</span> 
