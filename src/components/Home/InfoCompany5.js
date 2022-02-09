@@ -129,14 +129,14 @@ const Background = styled.section`
   transition: ease-in 0.5s;
 }
 .info-section {
-    background:rgba(236,236,236,0.5);
+    /* background:rgba(236,236,236,0.5); */
     height:auto;
     display:flex;
     align-items:center;
     align-content:center;
     justify-content:center;
     flex-direction:column;
-    border-radius:80px;
+    /* border-radius:80px; */
     margin:50px;
     box-shadow:  13px 13px 26px #d4d4d4, 
              -13px -13px 26px #ffffff;

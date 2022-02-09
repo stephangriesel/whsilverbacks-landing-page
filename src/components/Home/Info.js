@@ -23,14 +23,14 @@ export default function Info() {
 
 const Background = styled.section`
 .info-section {
-    background:rgba(236,236,236,0.5);
+    /* background:rgba(236,236,236,0.5); */
     height:65vh;
     display:flex;
     align-items:center;
     align-content:center;
     justify-content:center;
     flex-direction:column;
-    border-radius:80px;
+    /* border-radius:80px; */
     margin:50px;
     box-shadow:  13px 13px 26px #d4d4d4, 
              -13px -13px 26px #ffffff;
@@ -40,6 +40,5 @@ const Background = styled.section`
 .info-section {
     height:60vh;
     margin:50px 200px;
-}
 }
 }`
