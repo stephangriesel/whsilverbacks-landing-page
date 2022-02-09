@@ -1,65 +1,113 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from "framer-motion";
+import { InView } from 'react-intersection-observer';
 
 export default function Info() {
-  const [shouldShowActions, setShouldShowActions] = React.useState(false);
-  const [lastYPos, setLastYPos] = React.useState(0);
 
-  React.useEffect(() => {
-
-    function handleScroll(){
-      console.log('scrolled')
-      const yPos = window.scrollY;
-      const isScrollingUp = yPos < lastYPos;
-
-      setShouldShowActions(isScrollingUp);
-      setLastYPos(yPos);
-    }
-    window.addEventListener('scroll', handleScroll, false)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll, false)
-    }
-  }, [lastYPos]);
   return (
     <Background>
       <section className="py-5 info-section">
         <div className="container"></div>
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
-              <div className="lead text-muted mb-5">
-                <motion.div className='flex-column' animate={{opacity: shouldShowActions ? 1 : 0}} initial={{opacity: 0}} transition={{ opacity: {duration: 0.2 }}}>
-                  <span className="number">1</span>
-                  <span class="bold">CONTACT</span> 
-                  Get in touch for an initial conversation about your ideas and needs.
-                </motion.div>
-                <p className='flex-column'>
-                  <span className="number">2</span>
-                  <span class="bold">ESTIMATE</span> 
-                  We’ll get back to you with a project outline and a cost estimate.
-                </p>
-                <p className='flex-column'>
-                  <span className="number">3</span>
-                  <span class="bold">DESIGN</span> 
-                  Let us create the final design and give you a quote to sign off on.
-                </p>
-                <p className='flex-column'>
-                  <span className="number">4</span>
-                  <span class="bold">PRODUCTION</span> 
-                  As we frequently share visual updates, you can oversee our progress.
-                </p>
-                <p className='flex-column'>
-                  <span className="number">5</span>
-                  <span class="bold">INSTALLATION</span> 
-                  We deliver and install the finalized product with the greatest care.
-                </p>
-                <p className='flex-column'>
-                  <span className="number">6</span>
-                  <span class="bold">AFTERCARE</span> 
-                  Should any problem arise, feel free to contact us and have us fix it.
-                </p>
-              </div>
+            <div className="lead text-muted mb-5">
+              <InView threshold={0.25} triggerOnce>
+                {({ ref, inView }) => (
+                  <motion.p
+                    className='flex-column'
+                    ref={ref}
+                    className='flex-column'
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <span className="number">1</span>
+                    <span class="bold">CONTACT</span>
+                    Get in touch for an initial conversation about your ideas and needs.
+                  </motion.p>
+                )}
+              </InView>
+              <InView threshold={0.25} triggerOnce>
+                {({ ref, inView }) => (
+                  <motion.p
+                    ref={ref}
+                    className='flex-column'
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <span className="number">2</span>
+                    <span class="bold">ESTIMATE</span>
+                    We’ll get back to you with a project outline and a cost estimate.
+                  </motion.p>
+                )}
+              </InView>
+              <InView threshold={0.25} triggerOnce>
+                {({ ref, inView }) => (
+                  <motion.p
+                    className='flex-column'
+                    ref={ref}
+                    className='flex-column'
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <span className="number">3</span>
+                    <span class="bold">DESIGN</span>
+                    Let us create the final design and give you a quote to sign off on.
+                  </motion.p>
+                )}
+              </InView>
+              <InView threshold={0.25} triggerOnce>
+                {({ ref, inView }) => (
+                  <motion.p
+                    className='flex-column'
+                    ref={ref}
+                    className='flex-column'
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                <span className="number">4</span>
+                <span class="bold">PRODUCTION</span>
+                As we frequently share visual updates, you can oversee our progress.
+                </motion.p>
+                )}
+              </InView>
+              <InView threshold={0.25} triggerOnce>
+                {({ ref, inView }) => (
+                  <motion.p
+                    className='flex-column'
+                    ref={ref}
+                    className='flex-column'
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                <span className="number">5</span>
+                <span class="bold">INSTALLATION</span>
+                We deliver and install the finalized product with the greatest care.
+                </motion.p>
+                )}
+              </InView>
+              <InView threshold={0.25} triggerOnce>
+                {({ ref, inView }) => (
+                  <motion.p
+                    className='flex-column'
+                    ref={ref}
+                    className='flex-column'
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                <span className="number">6</span>
+                <span class="bold">AFTERCARE</span>
+                Should any problem arise, feel free to contact us and have us fix it.
+                </motion.p>
+                )}
+              </InView>
+            </div>
           </div>
         </div>
       </section>

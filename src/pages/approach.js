@@ -21,7 +21,7 @@ const whyPage = ({ data }) => (
       blur={{ min: -5, max: 0 }}
       bgImage={require('../images/info3.jpg')}
       bgImageAlt="Workbench"
-      strength={-200}
+      strength={-500}
       style={{
         height: '680px',
         backgroundColor: '#d2e2e2',
