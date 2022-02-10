@@ -17,7 +17,6 @@ export default function Info() {
                   <motion.p
                     className='flex-column'
                     ref={ref}
-                    className='flex-column'
                     initial={{ opacity: 0, scale: 0 }}
                     animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
                     transition={{ duration: 0.6 }}
@@ -33,7 +32,6 @@ export default function Info() {
                   <motion.p
                     className='flex-column'
                     ref={ref}
-                    className='flex-column'
                     initial={{ opacity: 0, scale: 0 }}
                     animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
                     transition={{ duration: 0.6 }}
@@ -49,7 +47,6 @@ export default function Info() {
                   <motion.p
                     className='flex-column'
                     ref={ref}
-                    className='flex-column'
                     initial={{ opacity: 0, scale: 0 }}
                     animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
                     transition={{ duration: 0.6 }}
@@ -65,7 +62,6 @@ export default function Info() {
                   <motion.p
                     className='flex-column'
                     ref={ref}
-                    className='flex-column'
                     initial={{ opacity: 0, scale: 0 }}
                     animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
                     transition={{ duration: 0.6 }}
@@ -81,7 +77,6 @@ export default function Info() {
                   <motion.p
                     className='flex-column'
                     ref={ref}
-                    className='flex-column'
                     initial={{ opacity: 0, scale: 0 }}
                     animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
                     transition={{ duration: 0.6 }}
