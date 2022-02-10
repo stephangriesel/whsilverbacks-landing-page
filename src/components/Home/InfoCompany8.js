@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { motion } from "framer-motion";
+import { InView } from 'react-intersection-observer';
 
 export default function Info() {
   return (
@@ -9,28 +11,88 @@ export default function Info() {
         {/* <Title title="WHY CHIPCHOP"></Title> */}
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
-          <div className="lead text-muted mb-5">
-              <p className='flex-column'>
-                  <span className="number">HIGH QUALITY</span>
-                  Everything we make, is built to last, even with intensive daily use.
-                </p>
-                <p className='flex-column'>
-                  <span className="number">GOOD DESIGN</span>
-                  Our designs are always pleasing to look at, easy to get and intuitive to use.
-                </p>
-                <p className='flex-column'>
-                  <span className="number">CUSTOMER SERVICE</span>
-                  We are on a journey to make customers happy with custom-made happiness.
-                </p>
-                <p className='flex-column'>
-                  <span className="number">BIG FUN</span>
-                  When crafting our products, we put the ‘fun’ back into ‘functionality’.
-                </p>
-                <p className='flex-column'>
-                  <span className="number">EPIC SUSTAINABILITY</span>
-                  Our materials are ethically sourced and our output is epically durable
-                </p>
-                </div>
+            <div className="lead text-muted mb-5">
+              <InView threshold={0.25} triggerOnce>
+                {({ ref, inView }) => (
+                  <motion.p
+                    className='flex-column'
+                    ref={ref}
+                    className='flex-column'
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+
+                    <span className="number">HIGH QUALITY</span>
+                    Everything we make, is built to last, even with intensive daily use.
+                  </motion.p>
+                )}
+              </InView>
+              <InView threshold={0.25} triggerOnce>
+                {({ ref, inView }) => (
+                  <motion.p
+                    className='flex-column'
+                    ref={ref}
+                    className='flex-column'
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+
+                    <span className="number">GOOD DESIGN</span>
+                    Our designs are always pleasing to look at, easy to get and intuitive to use.
+                  </motion.p>
+                )}
+              </InView>
+              <InView threshold={0.25} triggerOnce>
+                {({ ref, inView }) => (
+                  <motion.p
+                    className='flex-column'
+                    ref={ref}
+                    className='flex-column'
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+
+                    <span className="number">CUSTOMER SERVICE</span>
+                    We are on a journey to make customers happy with custom-made happiness.
+                  </motion.p>
+                )}
+              </InView>
+              <InView threshold={0.25} triggerOnce>
+                {({ ref, inView }) => (
+                  <motion.p
+                    className='flex-column'
+                    ref={ref}
+                    className='flex-column'
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+
+                    <span className="number">BIG FUN</span>
+                    When crafting our products, we put the ‘fun’ back into ‘functionality’.
+                  </motion.p>
+                )}
+              </InView>
+              <InView threshold={0.25} triggerOnce>
+                {({ ref, inView }) => (
+                  <motion.p
+                    className='flex-column'
+                    ref={ref}
+                    className='flex-column'
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+
+                    <span className="number">EPIC SUSTAINABILITY</span>
+                    Our materials are ethically sourced and our output is epically durable
+                  </motion.p>
+                )}
+              </InView>
+            </div>
           </div>
         </div>
       </section>
