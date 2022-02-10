@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Title from '../Globals/Title'
 import styled from 'styled-components'
 
 export default function Info() {
@@ -8,7 +7,6 @@ export default function Info() {
         <Background>
             <section className="py-5 info-section">
                 <div className="container"></div>
-                {/* <Title title="WHY CHIPCHOP"></Title> */}
                 <div className="row">
                     <div className="col-10 col-sm-8 mx-auto text-center">
                         <p className="lead text-muted mb-5">

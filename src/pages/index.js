@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 // import BackgroundSection from "../components/Globals/BackgroundSection"
 
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 
 
 import Info from '../components/Home/Info'

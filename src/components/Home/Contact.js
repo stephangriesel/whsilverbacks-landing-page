@@ -1,7 +1,6 @@
 import React from "react"
 import Title from "../Globals/Title"
 import Footer from "../Globals/Footer"
-import styled from "styled-components"
 
 export default function Contact() {
   return (

@@ -6,7 +6,7 @@ import Footer from "../components/Globals/Footer"
 import SEO from "../components/seo"
 
 
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 
 
 import Info1 from '../components/Home/InfoCompany1'
