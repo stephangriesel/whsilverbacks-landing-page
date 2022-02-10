@@ -127,6 +127,7 @@ const Background = styled.section`
   flex-direction: column;
   justify-content:center;
   align-items:center;
+  margin:3em 0;
   .number {
     background-color:var(--mainPink);
     display:flex;
@@ -145,7 +146,7 @@ const Background = styled.section`
 
 @media (min-width: 800px) {
 .info-section {
-    height:120vh;
+    height:100vh;
     margin:100px 20px;
 }
 }
