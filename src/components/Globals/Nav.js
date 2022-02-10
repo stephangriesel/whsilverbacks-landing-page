@@ -35,7 +35,7 @@ function Nav(){
               <a className='nav-link' href="/contact">Contact</a>
             </li>
             <li className="nav-item ml-sm-5 cart-icon toggle">
-                <button className="snipcart-checkout"><span className="bag"><FaShoppingCart /></span></button>
+                <button className="snipcart-checkout" aria-label="Shopping Bag Icon"><span className="bag"><FaShoppingCart /></span></button>
             </li>
           </ul>
         </div>
