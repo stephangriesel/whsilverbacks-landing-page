@@ -146,7 +146,7 @@ const Background = styled.section`
 
 @media (min-width: 800px) {
 .info-section {
-    height:100vh;
+    height:auto;
     margin:100px 20px;
 }
 }
