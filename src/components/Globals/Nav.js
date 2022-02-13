@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../images/logo.svg'
-import { FaShoppingCart } from 'react-icons/fa'
+// import { FaShoppingCart } from 'react-icons/fa'
 import styled from 'styled-components';
 
 function Nav(){
@@ -29,14 +29,14 @@ function Nav(){
               </div>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href="/portfolio">Portfolio</a>
+              <a className='nav-link' href="/work">Work</a>
             </li>
             <li className='nav-item'>
               <a className='nav-link' href="/contact">Contact</a>
             </li>
-            <li className="nav-item ml-sm-5 cart-icon toggle">
+            {/* <li className="nav-item ml-sm-5 cart-icon toggle">
                 <button className="snipcart-checkout" aria-label="Shopping Bag Icon"><span className="bag"><FaShoppingCart /></span></button>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
