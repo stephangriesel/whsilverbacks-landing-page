@@ -9,11 +9,6 @@ import { graphql } from 'gatsby'
 const ContactPage = ({ data }) => (
   <Layout>
     <SEO title="Contact" />
-    {/* <BackgroundSection
-      img={data.img.childImageSharp.fluid}
-      title="About Us"
-      styleClass="about-background"
-    /> */}
     <Contact />
   </Layout>
 );

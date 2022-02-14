@@ -1,12 +1,13 @@
 import React from "react"
 import Title from "../Globals/Title"
 import Footer from "../Globals/Footer"
+import styled from "styled-components"
 
 export default function Contact() {
   return (
     <section className="contact py-3 fade-in">
       <Title title="Contact Us" />
-      <div className="row pb-5 pt-5">
+      <Wrapper className="row pb-5 pt-5">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
           <form action="https://formspree.io/f/xknkjdon" method="POST">
             <div className="form-group">
@@ -57,8 +58,19 @@ export default function Contact() {
             </button>
           </form>
         </div>
-      </div>
+      </Wrapper>
       <Footer />
     </section>
   )
 }
+
+const Wrapper = styled.div`
+input,textarea {
+  width:30em;
+  margin:0 auto;
+}
+.btn {
+  width:10em;
+  margin:0 auto;
+}
+`
