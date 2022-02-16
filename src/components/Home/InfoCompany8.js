@@ -110,7 +110,7 @@ const Background = styled.section`
 }
 .info-section {
     /* background:rgba(236,236,236,0.5); */
-    height:auto;
+    height:150vh;
     display:flex;
     align-items:center;
     align-content:center;
@@ -146,8 +146,8 @@ const Background = styled.section`
 
 @media (min-width: 800px) {
 .info-section {
-    height:auto;
-    margin:100px 20px;
+    height:110vh;
+    margin:50px 20px;
 }
 }
 `

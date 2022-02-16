@@ -66,7 +66,8 @@ export default function Contact() {
 
 const Wrapper = styled.div`
 input,textarea {
-  width:30em;
+  width:100%;
+  max-width:30em;
   margin:0 auto;
 }
 .btn {
