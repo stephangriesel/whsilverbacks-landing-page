@@ -35,7 +35,7 @@ const Background = styled.section`
     /* border-radius:80px; */
     box-shadow:  13px 13px 26px #d4d4d4, 
              -13px -13px 26px #ffffff;
-    margin:50px;
+    margin:10px;
 }
 
 @media (min-width: 800px) {

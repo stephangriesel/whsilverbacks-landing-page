@@ -12,7 +12,7 @@ export default function Info() {
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
             <p className="lead text-muted mb-5">
-              <strong className="bold">CUSTOM-MADE DESIGNS MADE SIMPLE</strong> - Without a smart process in place, design projects can be quite complex. Can’t see the wood for the trees? Then let us guide you, every step of the way.
+              <strong className="bold">CUSTOM-MADE DESIGNS MADE SIMPLE</strong> - Without a smart process in place, design projects can be quite complex. Can’t see the woods for the trees? Then let us guide you, every step of the way.
             </p>
           </div>
         </div>
@@ -24,7 +24,7 @@ export default function Info() {
 const Background = styled.section`
 .info-section {
     /* background:rgba(236,236,236,0.5); */
-    height:auto;
+    height:60vh;
     display:flex;
     align-items:center;
     align-content:center;
