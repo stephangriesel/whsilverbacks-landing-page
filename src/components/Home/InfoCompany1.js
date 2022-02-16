@@ -26,7 +26,7 @@ export default function Info() {
 const Background = styled.section`
 .info-section {
     /* background:rgba(236,236,236,0.5); */
-    height:auto;
+    height:100vh;
     display:flex;
     align-items:center;
     align-content:center;
@@ -35,12 +35,13 @@ const Background = styled.section`
     /* border-radius:80px; */
     box-shadow:  13px 13px 26px #d4d4d4, 
              -13px -13px 26px #ffffff;
+    margin:50px;
 }
 
 @media (min-width: 800px) {
 .info-section {
-    height:60vh;
-    margin:20px 20px;
+    height:40vh;
+    margin:50px 20px;
 }
 }
 `
