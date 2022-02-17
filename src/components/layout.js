@@ -8,13 +8,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./layout.css"
-import Header from './Globals/Header'
+// import Header from './Globals/Header'
 import './bootstrap.min.css';
 
 const Layout = ({ children }) =>
 
   <>
-    <Header />
+    {/* <Header /> */}
     <div className="wrapper">
       {children}
     </div>
