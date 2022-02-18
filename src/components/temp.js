@@ -7,38 +7,43 @@ const Temp = () =>
 
   <Wrapper>
     <SEO title="Coming Soon" />
+    <div className="brand">
     <img src={Logo} alt="" srcset="" />
+    </div>
     <div>
-      <p>
+      <p className="custom-font sub-heading">
         stretch tents | event construction | project management
       </p>
-      <p>
-        <span>under construction</span>
+      <p className="temp">
+        <span className="custom-font">under construction</span>
       </p>
-      <div>
-        loading animation goes here
+      <div className="loading">
+      <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
       </div>
-      <p>
+      <p className="custom-font temp2">
         Get in touch
       </p>
       <p>
-        <a href="mailto:info@silverbacks.co.uk">info@silverbacks.co.uk</a>
+        <a className="custom-font temp2" href="mailto:info@silverbacks.co.uk">info@silverbacks.co.uk</a>
       </p>
-      <p>
-      07956 102133 or 07446 984468
+      <p className="custom-font temp3">
+      07956 102133 <span className="inbetween-text custom-font">OR</span> 07446 984468
       </p>
-      <div>
+      <div className="footer-temp custom-font">
         &copy;
         <span id="copyright">
           <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear())) </script>
         </span> 
-        {" "}WH Silverbacks
+        {" "}WH GROUP LTD
       </div>
     </div>
   </Wrapper>
 
 
 const Wrapper = styled.div`
+a {
+  color:#FFF !important;
+}
 display:grid;
 justify-content:center;
 align-content:center;
@@ -61,9 +66,100 @@ background-image: linear-gradient(
 margin:0;
 padding:0;
 
-img {
-  width:30em;
+p {
+  color:#FFF;
+  text-align:center;
 }
+
+.inbetween-text {
+  font-size:0.8em;
+}
+
+.sub-heading {
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  margin:2em 0;
+}
+
+.temp {
+  font-size:2.5em;
+  text-transform:uppercase;
+  font-weight:900;
+  text-shadow: 2px 2px 16px rgba(255, 255, 255, 1);
+  margin:1.5em 0;
+}
+
+.temp2 {
+  margin:0.5em;
+  font-size:1.2em;
+  text-transform:uppercase;
+  font-weight:600;
+}
+
+.temp3 {
+  margin:0.5em;
+  font-size:1.1em;
+}
+
+.brand {
+  display:flex;
+  justify-content:center;
+  img {
+  width:100%;
+  max-width:30em;
+}
+}
+
+.footer-temp {
+  text-align:center;
+  margin:4em 0;
+  color:#FFF;
+}
+
+/* Loading Animation */
+
+.loading {
+  display:flex;
+  justify-content:center;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 `
 

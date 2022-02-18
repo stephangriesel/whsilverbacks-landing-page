@@ -4,9 +4,9 @@ Blue: #d2e2e2
 Pink: #ebccca
 DimGray: #4b5b5a
 */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@500&display=swap");
-h1 {
-  font-family: 'Raleway', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+.custom-font {
+  font-family: 'Orbitron', sans-serif;
 }
 
 * {
@@ -18,7 +18,7 @@ h1 {
 }
 
 a {
-  color: #4b5b5a;
+  color: #FFF;
 }
 
 :root {
@@ -52,7 +52,6 @@ a {
 }
 
 .wrapper {
-  /* padding-top: 50px; */
   /* box-shadow: 0 0 50px rgb(236,206,204,0.5); */
 }
 
