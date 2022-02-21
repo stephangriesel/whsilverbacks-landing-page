@@ -12,7 +12,7 @@ const Temp = () =>
     </div>
     <div>
       <p className="custom-font sub-heading">
-        stretch tents | event construction | project management
+        stretch tents | event construction | temporary structures
       </p>
       <p className="temp">
         <span className="custom-font">under construction</span>
@@ -83,16 +83,19 @@ p {
 }
 
 .temp {
-  font-size:2.5em;
+  font-size:2.0em;
   text-transform:uppercase;
   font-weight:900;
   text-shadow: 2px 2px 16px rgba(255, 255, 255, 1);
   margin:1.5em 0;
+  letter-spacing:0.1em;
+  width:100%;
 }
 
 .temp2 {
   margin:0.5em;
   font-size:1.2em;
+  letter-spacing:0.1em;
   text-transform:uppercase;
   font-weight:600;
 }
@@ -100,6 +103,7 @@ p {
 .temp3 {
   margin:0.5em;
   font-size:1.1em;
+  letter-spacing:0.1em;
 }
 
 .brand {
@@ -108,12 +112,13 @@ p {
   img {
   width:100%;
   max-width:30em;
+  margin-top:2em;
 }
 }
 
 .footer-temp {
   text-align:center;
-  margin:4em 0;
+  margin-top:2em;
   color:#FFF;
 }
 

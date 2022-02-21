@@ -16,6 +16,8 @@ DimGray: #4b5b5a
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow:none;
+  // background:#000;
 }
 
 a {
@@ -37,6 +39,8 @@ a {
 #gatsby-focus-wrapper {
   margin: 0 auto;
   // width: 80%;
+  overflow:none;
+  background:black;
 }
 
 .bold {
@@ -54,7 +58,7 @@ a {
 }
 
 body {
-  background: var(--mainWhite);
+  background: var(--mainDark);
   color: var(--mainDark);
 }
 
@@ -175,7 +179,7 @@ section {
   }
 }
 .snip-layout .snip-footer {
-  background: var(--mainWhite) !important;
+  background: var(--mainDark) !important;
 }
 
 .snip-layout .snip-footer__copyright {

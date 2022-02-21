@@ -15,11 +15,11 @@ import Temp from "../components/temp"
 // import LatestProducts from "../components/Home/ProductHighlights"
 
 const IndexPage = ({ data }) => (
-  <Layout>
+<>
 
     <Temp />
 
-  </Layout>
+    </>
 )
 
 export const query = graphql`
