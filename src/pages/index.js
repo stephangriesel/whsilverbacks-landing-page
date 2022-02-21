@@ -79,7 +79,8 @@ p {
   font-weight:900;
   text-transform:uppercase;
   letter-spacing:0.2em;
-  margin:2em 0;
+  margin-top:2em;
+  margin-bottom:2em;
 }
 
 .temp {
@@ -111,14 +112,14 @@ p {
   justify-content:center;
   img {
   width:100%;
-  max-width:30em;
+  max-width:20em;
   margin-top:2em;
 }
 }
 
 .footer-temp {
   text-align:center;
-  margin-top:2em;
+  /* margin-top:2em; */
   color:#FFF;
 }
 
@@ -163,6 +164,10 @@ p {
   100% {
     transform: rotate(360deg);
   }
+}
+
+@media only screen and (min-width: 600px) {
+  height:100vh;
 }
 `
 
