@@ -2,13 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import SEO from "../components/seo";
-import Logo from "../images/logo.png"
 
 const IndexPage = () => (
   <Wrapper>
     <SEO title="Coming Soon" />
     <div className="brand">
-      <img src={Logo} alt="logo" />
+      <img src="https://res.cloudinary.com/dvme554nj/image/upload/v1646029327/whsilverbacks/logo_k9yl5f.png" alt="logo" />
     </div>
     <div>
       <p className="custom-font sub-heading">
