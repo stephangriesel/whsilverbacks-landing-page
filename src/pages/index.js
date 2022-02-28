@@ -4,11 +4,11 @@ import styled from "styled-components"
 import SEO from "../components/seo";
 import Logo from "../images/logo.png"
 
-const IndexPage = ({ }) => (
+const IndexPage = () => (
   <Wrapper>
     <SEO title="Coming Soon" />
     <div className="brand">
-      <img src={Logo} alt="" srcset="" />
+      <img src={Logo} alt="logo" />
     </div>
     <div>
       <p className="custom-font sub-heading">
